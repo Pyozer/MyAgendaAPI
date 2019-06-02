@@ -2,7 +2,7 @@
   "name": "ical_parser_api",
   "description": "Ical parser for MyAgenda app",
   "version": "1.0.0",
-  "main": "dist/app.js",
+  "main": "dist/src/app.js",
   "author": "Jean-Charles Moussé",
   "license": "MIT",
   "scripts": {
@@ -10,7 +10,7 @@
     "lint": "tslint -c tslint.json -p tsconfig.json --fix",
     "tsc": "tsc",
     "build": "npm-run-all clean lint tsc",
-    "dev": "tsc-watch --onSuccess \"node ./dist/src/app.js\"",
+    "dev": "tsc-watch --onSuccess \"node .\"",
     "start": "node ."
   },
   "dependencies": {
