@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import * as helpList from "../../../data/help/help_list.json";
+import helpList from "../../../data/help/help_list.json";
 
 function helps(req: Request, res: Response) {
     const lang: string = req.headers["accept-language"];
