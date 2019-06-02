@@ -1,7 +1,7 @@
-import express, { Application } from "express";
-import { handleBodyRequestParsing, handleCompression } from "./middlewares/common";
 import dotevent from "dotenv";
+import express, { Application } from "express";
 import morgan from "morgan";
+import { handleBodyRequestParsing, handleCompression } from "./middlewares/common";
 import baseRoute from "./routes/base";
 
 const app: Application = express();
@@ -9,7 +9,7 @@ const app: Application = express();
 dotevent.config();
 handleBodyRequestParsing(app);
 handleCompression(app);
-app.use(morgan('[:date] :method :url :status :res[content-length] - :response-time ms'))
+app.use(morgan("[:date] :method :url :status :res[content-length] - :response-time ms"));
 
 app.use("/api", baseRoute);
 
