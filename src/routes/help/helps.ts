@@ -20,8 +20,7 @@ function helpFile(req: Request, res: Response) {
     readFile(`./data/help/${req.params.filename}_${lang}.md`, "utf8", (err, data) => {
         if (err) {
             res.status(400).send({ error: `Filename provided is unknown, or not supported in ${lang}` });
-        }
-        else {
+        } else {
             res.contentType("text/markdown").send(data);
         }
     });

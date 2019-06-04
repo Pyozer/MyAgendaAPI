@@ -1,6 +1,6 @@
 import parser from "body-parser";
 import compression from "compression";
-import { Application } from "express";
+import { Application, NextFunction, Request, Response } from "express";
 
 export const handleBodyRequestParsing = (app: Application) => {
   app.use(parser.urlencoded({ extended: true }));
@@ -12,7 +12,7 @@ export const handleCompression = (app: Application) => {
 };
 
 export const handleAcceptLanguage = (app: Application) => {
-  app.use((req, res, next) => {
+  app.use((req: Request, res: Response, next: NextFunction) => {
     if (!req.headers["accept-language"]) {
       res.status(400).send({ error: "You must provide the language in Accept-Language header" });
     } else {
