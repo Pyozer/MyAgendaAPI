@@ -10,3 +10,14 @@ export const handleBodyRequestParsing = (app: Application) => {
 export const handleCompression = (app: Application) => {
   app.use(compression());
 };
+
+export const handleAcceptLanguage = (app: Application) => {
+  app.use((req, res, next) => {
+    if (!req.headers["accept-language"]) {
+      res.status(400).send({ error: "You must provide the language in Accept-Language header" });
+    } else {
+      req.headers["accept-language"] = req.headers["accept-language"].split(",")[0].split("_")[0].split("-")[0];
+      next();
+    }
+  });
+};
