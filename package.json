@@ -2,7 +2,7 @@
   "name": "ical_parser_api",
   "description": "Ical parser for MyAgenda app",
   "version": "1.0.0",
-  "main": "dist/src/app.js",
+  "main": "dist/app.js",
   "author": "Jean-Charles Moussé",
   "license": "MIT",
   "scripts": {

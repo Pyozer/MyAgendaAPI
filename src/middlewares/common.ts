@@ -1,23 +1,34 @@
-import parser from "body-parser";
-import compression from "compression";
-import { Application, NextFunction, Request, Response } from "express";
+import parser from "body-parser"
+import compression from "compression"
+import { NextFunction, Request, Response, Router } from "express"
+import morgan from "morgan"
 
-export const handleBodyRequestParsing = (app: Application) => {
-  app.use(parser.urlencoded({ extended: true }));
-  app.use(parser.json());
-};
+export const handleBodyRequestParsing = (router: Router) => {
+  router.use(parser.urlencoded({ extended: true }))
+  router.use(parser.json())
+}
 
-export const handleCompression = (app: Application) => {
-  app.use(compression());
-};
+export const handleCompression = (router: Router) => {
+  router.use(compression())
+}
 
-export const handleAcceptLanguage = (app: Application) => {
-  app.use((req: Request, res: Response, next: NextFunction) => {
+export const handleAcceptLanguage = (router: Router) => {
+  router.use((req: Request, res: Response, next: NextFunction) => {
     if (!req.headers["accept-language"]) {
-      res.status(400).send({ error: "You must provide the language in Accept-Language header" });
+      res.status(400).send({ error: "You must provide the language in Accept-Language header" })
     } else {
-      req.headers["accept-language"] = req.headers["accept-language"].split(",")[0].split("_")[0].split("-")[0];
-      next();
+      const lang = req.headers["accept-language"].split(",")[0].split("_")[0].split("-")[0]
+      const supportedLanguages = ["en", "fr"]
+      if (supportedLanguages.includes(lang)) {
+        req.headers["accept-language"] = lang
+      } else {
+        req.headers["accept-language"] = "en"
+      }
+      next()
     }
-  });
-};
+  })
+}
+
+export const handleMorgan = (router: Router) => {
+  router.use(morgan("[:date] :method :url :status :res[content-length] - :response-time ms"))
+}

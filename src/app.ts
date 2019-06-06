@@ -1,20 +1,15 @@
-import dotevent from "dotenv";
-import express, { Application } from "express";
-import morgan from "morgan";
-import { handleAcceptLanguage, handleBodyRequestParsing, handleCompression } from "./middlewares/common";
-import baseRoute from "./routes/base";
+import dotevent from "dotenv"
+import express, { Application } from "express"
+import middlewares from "./middlewares"
+import baseRoute from "./routes/base"
+import { applyMiddlewares } from "./utils"
 
-const app: Application = express();
+const app: Application = express()
 
-dotevent.config();
-handleBodyRequestParsing(app);
-handleCompression(app);
-handleAcceptLanguage(app);
-app.use(morgan("[:date] :method :url :status :res[content-length] - :response-time ms"));
+dotevent.config()
+applyMiddlewares(middlewares, app)
 
-app.use("/api", baseRoute);
+app.use("/api", baseRoute)
 
-const { PORT = 3000 } = process.env;
-app.listen(PORT, () => {
-    console.log("API listening on port " + PORT);
-});
+const { PORT = 3000 } = process.env
+app.listen(PORT, () => console.log(`API listening on port ${PORT}`))
