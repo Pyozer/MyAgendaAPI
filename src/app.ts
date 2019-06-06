@@ -10,8 +10,8 @@ const app: Application = express()
 dotevent.config()
 applyMiddlewares(middlewares, app)
 
-app.use("/", welcome)
 app.use("/api", baseRoute)
+app.use("/", welcome)
 
 const { PORT = 3000 } = process.env
 app.listen(PORT, () => console.log(`API listening on port ${PORT}`))

@@ -5,9 +5,9 @@ import { welcome } from "./welcome"
 
 const router: Router = Router()
 
-router.get("/", welcome)
 router.get("/parseical", parseIcal)
-router.get("/helps", helps)
 router.get("/helps/:filename", helpFile)
+router.get("/helps", helps)
+router.get("/", welcome)
 
 export default router
