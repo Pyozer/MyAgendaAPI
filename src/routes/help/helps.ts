@@ -31,7 +31,7 @@ const helpFile = (req: Request, res: Response) => {
         if (err) {
             res.status(400).send({ error: `Filename provided is unknown, or not supported in ${lang}` })
         } else {
-            res.type("text/markdown").send(data)
+            res.send({ data })
         }
     })
 }
