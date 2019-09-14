@@ -1,9 +1,8 @@
 import { Request, Response } from "express"
 const ical: any = require("node-ical")
-import { parse } from "url"
 
-function parseIcal(req: Request, res: Response) {
-    const { url } = parse(req.url, true).query
+const parseIcal = (req: Request, res: Response) => {
+    const { url } = req.query
     if (!url) {
         res.status(400).send({ error: "You must provide the url parameter, for the ical file." })
         return
