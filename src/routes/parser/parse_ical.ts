@@ -11,21 +11,21 @@ const parseIcal = (req: Request, res: Response) => {
         return
     }
 
-    readFile(`./data/agendas/resources.json`, 'utf8', (err, data: string) => {
+    readFile(`./data/agendas/resources.json`, "utf8", (err, data: string) => {
         if (err) {
             res.status(400).send({ error: `Resources file not found` })
         } else {
-            let univData = JSON.parse(data).find((univ: any) => univ.id == univId);
+            const univData = JSON.parse(data).find((univ: any) => univ.id === univId)
 
             if (!univData) {
                 res.status(400).send({ error: `University id provided is not correct !` })
                 return
             }
 
-            let univUrl = univData.agendaUrl
-                .replace('%res%', resId)
-                .replace('%firstDate%', firstDate)
-                .replace('%lastDate%', lastDate)
+            const univUrl = univData.agendaUrl
+                .replace("%res%", resId)
+                .replace("%firstDate%", firstDate)
+                .replace("%lastDate%", lastDate)
 
             icalFromUrl(univUrl, (error: any, vevents: []) => {
                 if (error) {

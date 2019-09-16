@@ -1,9 +1,9 @@
 import { Router } from "express"
 import { helpFile, helps } from "./help/helps"
-import parseIcal from "./parser/parse_ical"
 import parseCustomIcal from "./parser/parse_custom_ical"
-import { welcome } from "./welcome"
+import parseIcal from "./parser/parse_ical"
 import { resources, universityResources } from "./resources/resources"
+import { welcome } from "./welcome"
 
 const router: Router = Router()
 

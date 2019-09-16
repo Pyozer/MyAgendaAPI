@@ -1,6 +1,6 @@
 const ical: any = require("node-ical")
 
-const icalFromUrl = (url: string, callback: Function) => {
+const icalFromUrl = (url: string, callback: (error: any, vevents: any[]) => void) => {
     ical.fromURL(url, {}, (error: any, icalData: any) => {
         if (error) {
             callback(error, null)
