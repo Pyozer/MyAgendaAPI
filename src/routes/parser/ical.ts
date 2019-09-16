@@ -1,16 +1,9 @@
-import { Request, Response } from "express"
 const ical: any = require("node-ical")
 
-const parseIcal = (req: Request, res: Response) => {
-    const { url } = req.query
-    if (!url) {
-        res.status(400).send({ error: "You must provide the url parameter, for the ical file." })
-        return
-    }
-
+const icalFromUrl = (url: string, callback: Function) => {
     ical.fromURL(url, {}, (error: any, icalData: any) => {
         if (error) {
-            res.status(400).send({ error })
+            callback(error, null)
             return
         }
         const vevents = []
@@ -32,8 +25,8 @@ const parseIcal = (req: Request, res: Response) => {
                 }
             }
         }
-        res.send({ data: { vevents } })
+        callback(null, vevents)
     })
 }
 
-export default parseIcal
+export default icalFromUrl

@@ -12,12 +12,12 @@ const resources = (req: Request, res: Response) => {
 }
 
 const universityResources = (req: Request, res: Response) => {
-    const { univFile } = req.params
-    if (!univFile) {
+    const { univId } = req.params
+    if (!univId) {
         res.status(400).send({ error: "You must provide the university resource file name !" })
         return
     }
-    readFile(`./data/agendas/${univFile}.json`, 'utf8', (err, data: string) => {
+    readFile(`./data/agendas/resources_${univId}.json`, 'utf8', (err, data: string) => {
         if (err) {
             res.status(400).send({ error: `University filename provided not found` })
         } else {
