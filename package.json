@@ -1,5 +1,5 @@
 {
-  "name": "myzgenda_api",
+  "name": "myagenda_api",
   "description": "NodeJS Api for MyAgenda app",
   "version": "1.0.1",
   "main": "dist/app.js",
