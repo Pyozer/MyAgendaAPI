@@ -1,29 +1,28 @@
 import { Request, Response } from "express"
-import { readFile } from "fs"
+import { readFile } from "fs-extra"
+import { readAndParseFile } from "../../utils"
 
-const resources = (req: Request, res: Response) => {
-    readFile("./data/agendas/resources.json", "utf8", (err, data: string) => {
-        if (err) {
-            res.status(400).send({ error: `Filename provided is unknown` })
-        } else {
-            res.send({ data: JSON.parse(data) })
-        }
-    })
+const resources = async (_: Request, res: Response) => {
+    try {
+        const data = await readAndParseFile("./data/agendas/resources.json")
+        res.send({ data })
+    } catch (error) {
+        res.status(400).send({ error })
+    }
 }
 
-const universityResources = (req: Request, res: Response) => {
+const universityResources = async (req: Request, res: Response) => {
     const { univId } = req.params
     if (!univId) {
         res.status(400).send({ error: "You must provide the university resource file name !" })
         return
     }
-    readFile(`./data/agendas/resources_${univId}.json`, "utf8", (err, data: string) => {
-        if (err) {
-            res.status(400).send({ error: `University filename provided not found` })
-        } else {
-            res.send({ data: JSON.parse(data) })
-        }
-    })
+    try {
+        const data = await readAndParseFile(`./data/agendas/resources_${univId}.json`)
+        res.send({ data })
+    } catch (error) {
+        res.status(400).send({ error })
+    }
 }
 
 export { resources, universityResources }

@@ -1,8 +1,8 @@
 import { Request, Response } from "express"
-import { readFile } from "fs"
+import { readAndParseFile } from "../../utils"
 import icalFromUrl from "./ical"
 
-const parseIcal = (req: Request, res: Response) => {
+const parseIcal = async (req: Request, res: Response) => {
     const { univId, resId } = req.params
     const { firstDate, lastDate } = req.query
 
@@ -11,31 +11,30 @@ const parseIcal = (req: Request, res: Response) => {
         return
     }
 
-    readFile(`./data/agendas/resources.json`, "utf8", (err, data: string) => {
-        if (err) {
-            res.status(400).send({ error: `Resources file not found` })
-        } else {
-            const univData = JSON.parse(data).find((univ: any) => univ.id === univId)
+    try {
+        const data: any[] = await readAndParseFile(`./data/agendas/resources.json`)
+        const univData = data.find((univ: any) => univ.id === univId)
 
-            if (!univData) {
-                res.status(400).send({ error: `University id provided is not correct !` })
+        if (!univData) {
+            res.status(400).send({ error: `University id provided is not correct !` })
+            return
+        }
+
+        const univUrl = univData.agendaUrl
+            .replace("%res%", resId)
+            .replace("%firstDate%", firstDate)
+            .replace("%lastDate%", lastDate)
+
+        icalFromUrl(univUrl, (error: any, vevents: []) => {
+            if (error) {
+                res.status(400).send({ error })
                 return
             }
-
-            const univUrl = univData.agendaUrl
-                .replace("%res%", resId)
-                .replace("%firstDate%", firstDate)
-                .replace("%lastDate%", lastDate)
-
-            icalFromUrl(univUrl, (error: any, vevents: []) => {
-                if (error) {
-                    res.status(400).send({ error })
-                    return
-                }
-                res.send({ data: { vevents } })
-            })
-        }
-    })
+            res.send({ data: { vevents } })
+        })
+    } catch (error) {
+        res.status(400).send({ error: `Resources file not found` })
+    }
 }
 
 export default parseIcal

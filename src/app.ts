@@ -1,13 +1,14 @@
-import dotevent from "dotenv"
+import { config as dotEnvConfig } from "dotenv"
 import express, { Application } from "express"
 import middlewares from "./middlewares"
 import baseRoute from "./routes/base"
 import { welcome } from "./routes/welcome"
 import { applyMiddlewares } from "./utils"
 
+dotEnvConfig()
+
 const app: Application = express()
 
-dotevent.config()
 applyMiddlewares(middlewares, app)
 
 app.use("/api", baseRoute)
