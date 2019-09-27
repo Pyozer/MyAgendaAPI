@@ -14,7 +14,7 @@ const resources = async (req: Request, res: Response) => {
 const universityResources = async (req: Request, res: Response) => {
     const { univId } = req.params
     if (!univId) {
-        res.status(400).send({ error: getLangMsg(req, 'missing_university_filename') })
+        res.status(400).send({ error: getLangMsg(req, "missing_university_filename") })
         return
     }
     try {

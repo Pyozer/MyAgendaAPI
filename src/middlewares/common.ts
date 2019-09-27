@@ -14,7 +14,7 @@ export const handleCompression = (router: Router) => {
 
 export const handleAcceptLanguage = (router: Router) => {
   router.use((req: Request, res: Response, next: NextFunction) => {
-    const defaultLang = 'en'
+    const defaultLang = "en"
     if (!req.headers["accept-language"]) {
       req.headers["accept-language"] = defaultLang
     }

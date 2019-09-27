@@ -6,7 +6,7 @@ const helps = async (req: Request, res: Response) => {
     const lang = req.headers["accept-language"]
 
     try {
-        const helpPages: any[] = await readAndParseFile(req, './data/help/help_list.json')
+        const helpPages: any[] = await readAndParseFile(req, "./data/help/help_list.json")
         helpPages.forEach((help) => {
             if (help.title[lang]) {
                 help.title = help.title[lang]
@@ -22,7 +22,7 @@ const helps = async (req: Request, res: Response) => {
 
 const helpFile = async (req: Request, res: Response) => {
     if (!req.params.filename) {
-        res.status(400).send({ error: getLangMsg(req, 'unknown_help_file') })
+        res.status(400).send({ error: getLangMsg(req, "unknown_help_file") })
         return
     }
 
@@ -31,8 +31,6 @@ const helpFile = async (req: Request, res: Response) => {
         const data = await readFile(req, `./data/help/${req.params.filename}_${lang}.md`)
         res.send({ data })
     } catch (error) {
-        console.log(error);
-        
         res.status(400).send({ error })
     }
 }

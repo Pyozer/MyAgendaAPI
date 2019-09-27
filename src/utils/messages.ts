@@ -1,9 +1,9 @@
 import { Request } from "express"
 
 class Message {
-    key: string
-    en: string
-    fr: string
+    public key: string
+    public en: string
+    public fr: string
 
     constructor(key: string, en: string, fr: string) {
         this.key = key
@@ -11,68 +11,69 @@ class Message {
         this.fr = fr
     }
 
-    getMessage(lang: string) {
-        if (lang === 'fr') return this.fr
+    public getMessage(lang: string) {
+        if (lang === "fr") { return this.fr }
         return this.en
     }
 }
 
 const messages = [
     new Message(
-        'error_read_file',
-        'Cannot find and read file: %file%',
-        'Impossible de lire le fichier: %file%',
+        "error_read_file",
+        "Cannot find and read file: %file%",
+        "Impossible de lire le fichier: %file%",
     ),
     new Message(
-        'error_parse_file',
-        'Error when trying to parse data from file : %file%',
-        'Erreur durant la récupération des données du fichier: %file%',
+        "error_parse_file",
+        "Error when trying to parse data from file : %file%",
+        "Erreur durant la récupération des données du fichier: %file%",
     ),
     new Message(
-        'missing_university_filename',
-        'You must provide the university resource file name !',
-        'Nom du fichier de ressources de l\'université manquant !',
+        "missing_university_filename",
+        "You must provide the university resource file name !",
+        "Nom du fichier de ressources de l'université manquant !",
     ),
     new Message(
-        'missing_ical_parse_arguments',
-        'You must provide univId, resId, firstDate and lastDate to get events.',
-        'Vous devez fournir univId, resId, firstDate et lastDate pour obtenir des événements.',
+        "missing_ical_parse_arguments",
+        "You must provide univId, resId, firstDate and lastDate to get events.",
+        "Vous devez fournir univId, resId, firstDate et lastDate pour obtenir des événements.",
     ),
     new Message(
-        'missing_university_id',
-        'University id incorrect ! Please make sure you have latest version of the app',
-        'Identifiant universitaire incorrect! Assurez-vous que vous avez la dernière version de l\'application',
+        "missing_university_id",
+        "University id incorrect ! Please make sure you have latest version of the app",
+        "Identifiant universitaire incorrect! Assurez-vous que vous avez la dernière version de l'application",
     ),
     new Message(
-        'unknown_university_id',
-        'University id provided is not correct !',
-        'Identifiant de l\'université non reconnue',
+        "unknown_university_id",
+        "University id provided is not correct !",
+        "Identifiant de l'université non reconnue",
     ),
     new Message(
-        'missing_ical_url',
-        'You must provide ical file url to get events.',
-        'URL du fichier ICAL manquant, impossible d\'obtenir les événements.',
+        "missing_ical_url",
+        "You must provide ical file url to get events.",
+        "URL du fichier ICAL manquant, impossible d'obtenir les événements.",
     ),
     new Message(
-        'unknown_help_file',
-        'You must provide the filename to get help data',
-        'Nom du fichier d\'aide manquant, impossible de fournir les données',
+        "unknown_help_file",
+        "You must provide the filename to get help data",
+        "Nom du fichier d'aide manquant, impossible de fournir les données",
     ),
 ]
 
 export const getLangMsg = (req: Request, key: string, params?: Record<string, string>) => {
-    const lang = req.headers['accept-language']
+    const lang = req.headers["accept-language"]
 
-    let message = messages.find(message => message.key === key)
-    if (!message) return "Unknown message"
+    const message = messages.find((msg) => msg.key === key)
+    if (!message) { return "Unknown message" }
 
     let langMessage = message.getMessage(lang)
 
-    if (params)
+    if (params) {
         Object.keys(params).forEach((k) => {
-            let value = params[k]
+            const value = params[k]
             langMessage = langMessage.replace(`%${k}%`, value)
         })
+    }
 
     return langMessage
 }

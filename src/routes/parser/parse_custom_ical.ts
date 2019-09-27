@@ -1,12 +1,12 @@
 import { Request, Response } from "express"
-import icalFromUrl from "./ical"
 import { getLangMsg } from "../../utils/messages"
+import icalFromUrl from "./ical"
 
 const parseCustomIcal = (req: Request, res: Response) => {
     const { url } = req.query
 
     if (!url) {
-        res.status(400).send({ error: getLangMsg(req, 'missing_ical_url') })
+        res.status(400).send({ error: getLangMsg(req, "missing_ical_url") })
         return
     }
 

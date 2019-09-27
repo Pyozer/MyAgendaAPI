@@ -1,4 +1,4 @@
-import { Router, Request } from "express"
+import { Request, Router } from "express"
 import { readFile as readFileFs } from "fs-extra"
 import { getLangMsg } from "./messages"
 
@@ -14,7 +14,7 @@ export const readFile = async (req: Request, filePath: string): Promise<string> 
     try {
         return await readFileFs(filePath, "utf8")
     } catch (_) {
-        throw getLangMsg(req, 'error_read_file', { 'file': filePath })
+        throw getLangMsg(req, "error_read_file", { file: filePath })
     }
 }
 
@@ -23,6 +23,6 @@ export const readAndParseFile = async (req: Request, filePath: string) => {
     try {
         return JSON.parse(data)
     } catch (_) {
-        throw getLangMsg(req, 'error_parse_file', { 'file': filePath })
+        throw getLangMsg(req, "error_parse_file", { file: filePath })
     }
 }
