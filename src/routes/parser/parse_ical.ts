@@ -1,22 +1,28 @@
 import { Request, Response } from "express"
 import { readAndParseFile } from "../../utils"
 import icalFromUrl from "./ical"
+import { getLangMsg } from "../../utils/messages"
 
 const parseIcal = async (req: Request, res: Response) => {
     const { univId, resId } = req.params
     const { firstDate, lastDate } = req.query
 
     if (!univId || !resId || !firstDate || !lastDate) {
-        res.status(400).send({ error: "You must provide univId, resId, firstDate and lastDate to get events." })
+        res.status(400).send({ error: getLangMsg(req, 'missing_ical_parse_arguments') })
+        return
+    }
+    
+    if (univId == "null") {
+        res.status(400).send({ error: getLangMsg(req, 'missing_university_id') })
         return
     }
 
     try {
-        const data: any[] = await readAndParseFile(`./data/agendas/resources.json`)
+        const data: any[] = await readAndParseFile(req, './data/agendas/resources.json')
         const univData = data.find((univ: any) => univ.id === univId)
 
         if (!univData) {
-            res.status(400).send({ error: `University id provided is not correct !` })
+            res.status(400).send({ error: getLangMsg(req, 'unknown_university_id') })
             return
         }
 
@@ -33,7 +39,7 @@ const parseIcal = async (req: Request, res: Response) => {
             res.send({ data: { vevents } })
         })
     } catch (error) {
-        res.status(400).send({ error: `Resources file not found` })
+        res.status(400).send({ error })
     }
 }
 

@@ -14,18 +14,20 @@ export const handleCompression = (router: Router) => {
 
 export const handleAcceptLanguage = (router: Router) => {
   router.use((req: Request, res: Response, next: NextFunction) => {
+    const defaultLang = 'en'
     if (!req.headers["accept-language"]) {
-      res.status(400).send({ error: "You must provide the language in Accept-Language header" })
-    } else {
-      const lang = req.headers["accept-language"].split(",")[0].split("_")[0].split("-")[0]
-      const supportedLanguages = ["en", "fr"]
-      if (supportedLanguages.includes(lang)) {
-        req.headers["accept-language"] = lang
-      } else {
-        req.headers["accept-language"] = "en"
-      }
-      next()
+      req.headers["accept-language"] = defaultLang
     }
+
+    const lang = req.headers["accept-language"].split(",")[0].split("_")[0].split("-")[0]
+    const supportedLanguages = ["en", "fr"]
+
+    if (supportedLanguages.includes(lang)) {
+      req.headers["accept-language"] = lang.toLowerCase()
+    } else {
+      req.headers["accept-language"] = defaultLang
+    }
+    next()
   })
 }
 
