@@ -22,7 +22,7 @@
   {
     "id": "univ_tours",
     "university": "Université de Tours",
-    "agendaUrl": "http://ade.univ-tours.fr/jsp/custom/modules/plannings/anonymous_cal.jsp?projectId=2&calType=ical&resources=%res%&firstDate=%startDate%&lastDate=%lastDate%",
+    "agendaUrl": "http://ade.univ-tours.fr/jsp/custom/modules/plannings/anonymous_cal.jsp?projectId=3&calType=ical&resources=%res%&firstDate=%startDate%&lastDate=%lastDate%",
     "loginUrl": "https://cas.univ-tours.fr/cas/login",
     "loginFields": [
       "lt",
