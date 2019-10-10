@@ -2,7 +2,7 @@
 
 ## Origine du problème
 
-Il est fortement possible que votre université n'ai pas été ajouté. En effet chaque université est ajouté une par une et manuellement.
+Il est fortement possible que votre université n'ai pas été ajouté. En effet chaque université est ajoutée une par une et manuellement.
 
 Actuellement est présente seulement l'Université du Mans, de Tours, de Rennes ainsi que l'INSA de Rennes.
 

@@ -13,8 +13,8 @@ Il faut donc que les agendas soient intègrés manuellement une première fois, 
 Pour y remédier, rendez-vous dans le menu **Feedback** et envoyez nous un mail avec :
 
 - Votre université
-- Votre département (Informatique, sciences sociales, ....)
+- Votre département
 - Votre année
 - Votre groupe
 
- Ces informations nous permettront d'ajouter votre agenda à la liste.
+Ces informations nous permettront d'ajouter votre agenda à la liste.
