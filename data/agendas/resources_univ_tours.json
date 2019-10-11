@@ -398,9 +398,7 @@
                 "TD mobil": 21432
             }
         },
-        "Exchange Students": {
-            "Exchange Students": 4278
-        },
+        "Exchange Students": 4278,
         "I.U.T. de Blois": {
             "DUT Mesures Physiques 1 (MP1)": {
                 "MP1 AB": {
@@ -670,12 +668,8 @@
                         "Groupe 3": 26467
                     }
                 },
-                "LP Gestion & accompagnement de projets pédagogiques prc MSEE": {
-                    "LP Gestion & accompagnement de projets pédagogiques prc MSEE": 10807
-                },
-                "LP Interv. soc : accomp pub spécif prc tech interv pub vulné": {
-                    "LP Interv. soc : accomp pub spécif prc tech interv pub vulné": 10806
-                },
+                "LP Gestion & accompagnement de projets pédagogiques prc MSEE": 10807,
+                "LP Interv. soc : accomp pub spécif prc tech interv pub vulné": 10806,
                 "PST1": 7615,
                 "PST2": 7643
             },
@@ -751,50 +745,34 @@
                     },
                     "Groupe 2": {
                         "TP 2A": {
-                            "Espagnol": {
-                                "Espagnol": 16817
-                            }
+                            "Espagnol": 16817
                         },
                         "TP 2B": {
-                            "Espagnol": {
-                                "Espagnol": 16850
-                            }
+                            "Espagnol": 16850
                         }
                     },
                     "Groupe 3": {
                         "TP 3A": {
-                            "Espagnol": {
-                                "Espagnol": 16281
-                            }
+                            "Espagnol": 16281
                         },
                         "TP 3B": {
-                            "Espagnol": {
-                                "Espagnol": 16299
-                            }
+                            "Espagnol": 16299
                         }
                     },
                     "Groupe 4": {
                         "TP 4A": {
-                            "Espagnol": {
-                                "Espagnol": 12343
-                            }
+                            "Espagnol": 12343
                         },
                         "TP 4B": {
-                            "Espagnol": {
-                                "Espagnol": 16443
-                            }
+                            "Espagnol": 16443
                         }
                     },
                     "Groupe 5": {
                         "TP 5A": {
-                            "Espagnol": {
-                                "Espagnol": 17028
-                            }
+                            "Espagnol": 17028
                         },
                         "TP 5B": {
-                            "Espagnol": {
-                                "Espagnol": 17918
-                            }
+                            "Espagnol": 17918
                         }
                     },
                     "Groupe 6": {
@@ -1040,9 +1018,7 @@
                         "LP Mét. GRH Groupe CFA": 9699,
                         "LP Mét. GRH Groupe FI/FC": 9695
                     },
-                    "LP Métiers de la Gestion et de la Comptabilité : Contrôle de Gestion": {
-                        "LP Métiers de la Gestion et de la Comptabilité : Contrôle de Gestion": 9241
-                    },
+                    "LP Métiers de la Gestion et de la Comptabilité : Contrôle de Gestion": 9241,
                     "RH option développement compétences et formation professionnelle": 16461
                 }
             },
@@ -1491,17 +1467,11 @@
                 },
                 "DUT TC2A2": {
                     "G1": {
-                        "1_all": {
-                            "1_all": 7888
-                        },
-                        "1_esp": {
-                            "1_esp": 9993
-                        }
+                        "1_all": 7888,
+                        "1_esp": 9993
                     },
                     "G2": {
-                        "2_esp": {
-                            "2_esp": 11514
-                        }
+                        "2_esp": 11514
                     }
                 },
                 "LPVins": {
@@ -1658,12 +1628,8 @@
                     "IVR-IMRP": 12245
                 },
                 "M2 Imagerie Biomédicale": {
-                    "Imagerie Biomédicale option Imagerie": {
-                        "Imagerie Biomédicale option Imagerie": 10386
-                    },
-                    "Imagerie Biomédicale option Radiopharmaceutique": {
-                        "Imagerie Biomédicale option Radiopharmaceutique": 10390
-                    }
+                    "Imagerie Biomédicale option Imagerie": 10386,
+                    "Imagerie Biomédicale option Radiopharmaceutique": 10390
                 }
             },
             "Médecine": {
@@ -2123,9 +2089,7 @@
                     "PEPS": 6734
                 }
             },
-            "Relation Hôte Greffon": {
-                "Relation Hôte Greffon": 9029
-            }
+            "Relation Hôte Greffon": 9029
         },
         "Polytech'Tours (EPU)": {
             "DAE": {
@@ -2298,9 +2262,7 @@
                     }
                 },
                 "LabelCPE": 25087,
-                "M2RI CADS": {
-                    "M2RI CADS": 19479
-                },
+                "M2RI CADS": 19479,
                 "M2_Rech. Info": {
                     "M2R_AD ORDO": 6895,
                     "M2R_FOUILLE": 6902,
@@ -2444,9 +2406,7 @@
                 "Événementiel CRL": 22407
             },
             "MUNDUS": {
-                "Atelier Théatre - Drama": {
-                    "Atelier Théatre - Drama": 14048
-                },
+                "Atelier Théatre - Drama": 14048,
                 "Mundus - DAE": 9849,
                 "Mundus - DEE": 9851,
                 "Mundus - DI": 9850,
@@ -2549,13 +2509,9 @@
                     "DAEU A GROUPE 1": 13000,
                     "DAEU A GROUPE 2": 13100
                 },
-                "DAEU B": {
-                    "DAEU B": 11109
-                }
+                "DAEU B": 11109
             },
-            "DU Médiation et gestion de conflits": {
-                "DU Médiation et gestion de conflits": 15197
-            },
+            "DU Médiation et gestion de conflits": 15197,
             "DUHEPS": {
                 "DUHEPS GT 48": 8004,
                 "Séminaire": 17006
@@ -2565,9 +2521,7 @@
                 "Cours vendredi": 10074
             },
             "GRAF": 999,
-            "Insertions": {
-                "Insertions": 17322
-            },
+            "Insertions": 17322,
             "PROF. des Acteur de la Formation Groupe GESPPER": 13397,
             "VAE": {
                 "Validation des Acquis de l'Expérience": 7666
@@ -2579,9 +2533,7 @@
                 "D.U. Case Management": {
                     "Etudiants DU Case Management": 14190
                 },
-                "D.U. Histoire de Vie en Formation": {
-                    "D.U. Histoire de Vie en Formation": 1179
-                },
+                "D.U. Histoire de Vie en Formation": 1179,
                 "D.U.T.P.": {
                     "Etudiants DUTP": 11611
                 },
@@ -2647,18 +2599,10 @@
                             "Groupe D2": 4001
                         },
                         "Module 3": {
-                            "Module 3 Archéologie": {
-                                "Module 3 Archéologie": 4033
-                            },
-                            "Module 3 Histoire ancienne": {
-                                "Module 3 Histoire ancienne": 4054
-                            },
-                            "Module 3 Philosophie": {
-                                "Module 3 Philosophie": 4018
-                            },
-                            "Module 3 Regards sur l'Italie": {
-                                "Module 3 Regards sur l'Italie": 12987
-                            }
+                            "Module 3 Archéologie": 4033,
+                            "Module 3 Histoire ancienne": 4054,
+                            "Module 3 Philosophie": 4018,
+                            "Module 3 Regards sur l'Italie": 12987
                         },
                         "ORE": {
                             "1/3 temps": 16502,
@@ -3148,35 +3092,23 @@
             "Master enseignement-Capes-Agreg": {
                 "Histoire/géographie": {
                     "AGREGATION": {
-                        "Agrégation interne": {
-                            "Agrégation interne": 13124
-                        },
-                        "agrégation externe": {
-                            "Agrégation Externe": 7345
-                        }
+                        "Agrégation interne": 13124,
+                        "Agrégation externe": 7345
                     },
                     "M1 MEEF parcours histoire géographie": {
                         "Semestre 7": {
-                            "M1 MEEF parcours histoire géographie": {
-                                "M1 MEEF parcours histoire géographie": 4554
-                            }
+                            "M1 MEEF parcours histoire géographie": 4554
                         },
-                        "semestre 8": {
-                            "M1 MEEF parcours histoire géographie": {
-                                "M1 MEEF parcours histoire géographie": 22481
-                            }
+                        "Semestre 8": {
+                            "M1 MEEF parcours histoire géographie": 22481
                         }
                     },
                     "M2 MEEF parcours histoire géographie": {
                         "Semestre 10": {
-                            "M2 MEEF parcours histoire géographie": {
-                                "M2 MEEF parcours histoire géographie": 22699
-                            }
+                            "M2 MEEF parcours histoire géographie": 22699
                         },
                         "Semestre 9": {
-                            "M2 MEEF parcours histoire géographie": {
-                                "M2 MEEF parcours histoire géographie": 7044
-                            }
+                            "M2 MEEF parcours histoire géographie": 7044
                         }
                     }
                 },
@@ -3620,12 +3552,8 @@
                         }
                     }
                 },
-                "M1 Philosophie humanité et politique": {
-                    "M1 Philosophie humanité et politique": 1498
-                },
-                "M2 Philosophie humanité et politique": {
-                    "M2 Philosophie humanité et politique": 1501
-                }
+                "M1 Philosophie humanité et politique": 1498,
+                "M2 Philosophie humanité et politique": 1501
             },
             "Psychologie": {
                 "L1 Psychologie": {
@@ -3734,9 +3662,7 @@
                             "34.4 Documentation et citoyenneté, E-réputation TD": 16381,
                             "34.5 compétences numériques TD": 16387
                         },
-                        "Redoublants L2": {
-                            "Redoublants L2": 15661
-                        },
+                        "Redoublants L2": 15661,
                         "option psycho clinique": {
                             "Groupe 01": 8640,
                             "Groupe 02": 8650,
@@ -3799,45 +3725,19 @@
                         }
                     },
                     "Semestre 4": {
-                        "L2 Groupe 01": {
-                            "L2 Groupe 01": 25866
-                        },
-                        "L2 Groupe 02": {
-                            "L2 Groupe 02": 25867
-                        },
-                        "L2 Groupe 03": {
-                            "L2 Groupe 03": 25868
-                        },
-                        "L2 Groupe 04": {
-                            "L2 Groupe 04": 25869
-                        },
-                        "L2 Groupe 05": {
-                            "L2 Groupe 05": 25870
-                        },
-                        "L2 Groupe 06": {
-                            "L2 Groupe 06": 25871
-                        },
-                        "L2 Groupe 07": {
-                            "L2 Groupe 07": 25872
-                        },
-                        "L2 Groupe 08": {
-                            "L2 Groupe 08": 25873
-                        },
-                        "L2 Groupe 09": {
-                            "L2 Groupe 9": 25874
-                        },
-                        "L2 Groupe 10": {
-                            "L2 Groupe 10": 25875
-                        },
-                        "L2 Groupe 11": {
-                            "L2 Groupe 11": 25876
-                        },
-                        "L2 Groupe 12": {
-                            "L2 Groupe 12": 25877
-                        },
-                        "L2 Groupe 13": {
-                            "L2 Groupe 13": 25878
-                        },
+                        "L2 Groupe 01": 25866,
+                        "L2 Groupe 02": 25867,
+                        "L2 Groupe 03": 25868,
+                        "L2 Groupe 04": 25869,
+                        "L2 Groupe 05": 25870,
+                        "L2 Groupe 06": 25871,
+                        "L2 Groupe 07": 25872,
+                        "L2 Groupe 08": 25873,
+                        "L2 Groupe 09": 25874,
+                        "L2 Groupe 10": 25875,
+                        "L2 Groupe 11": 25876,
+                        "L2 Groupe 12": 25877,
+                        "L2 Groupe 13": 25878,
                         "Options Module 4.3": {
                             "43.1 Option psychogérontologie": 25765,
                             "43.2 Option psycho développement": 25766,
@@ -4136,9 +4036,7 @@
                         "Supervision - A. Huard": 23231,
                         "Supervision - O. Rouvre": 23233
                     },
-                    "M2 Enfant/Ado": {
-                        "M2 Enfant/Ado": 11276
-                    },
+                    "M2 Enfant/Ado": 11276,
                     "M2 Gérontologie": {
                         "M2 Gérontologie": 2696,
                         "Supervision - A. LERICHE": 18335,
@@ -4174,9 +4072,7 @@
                     "Option Concevoir et animer des actions de formation": 1745,
                     "Option Questions d'éthique": 1741
                 },
-                "M2 IFAC CHAINGY": {
-                    "M2 IFAC CHAINGY": 19445
-                },
+                "M2 IFAC CHAINGY": 19445,
                 "M2 INGENIERIE ET FONCTIONS D'ACCOMPAGNEMENT": {
                     "M2 IFAC": 2550
                 },
@@ -4470,12 +4366,8 @@
                         }
                     }
                 },
-                "M1 Sociologie métiers de l'intervention sociale": {
-                    "M1 Sociologie métiers de l'intervention sociale": 8983
-                },
-                "M1 Sociologie métiers de recherche socio & anthropo": {
-                    "M1 Sociologie métiers de recherche socio & anthropo": 8984
-                },
+                "M1 Sociologie métiers de l'intervention sociale": 8983,
+                "M1 Sociologie métiers de recherche socio & anthropo": 8984,
                 "M2 Sociologie prc métiers de l'intervention soc & territ": {
                     "M2 Sociologie métiers de l'intervention sociale": 10145
                 },
@@ -4485,26 +4377,18 @@
             }
         },
         "U.F.R. Droit, Economie et Sciences Sociales": {
-            "C.U. d'aptitude à l'insertion en L1 DESS": {
-                "C.U. d'aptitude à l'insertion en L1 DESS": 26556
-            },
+            "C.U. d'aptitude à l'insertion en L1 DESS": 26556,
             "DU PSYCHOCRIMINOLOGIE": {
                 "DU PSYCHOCRIMINILOGIE": 20828
             },
             "IAE": {
-                "Cycle préparatoire MAE": {
-                    "Cycle préparatoire MAE": 12843
-                },
-                "DUMS": {
-                    "DUMS": 21001
-                },
+                "Cycle préparatoire MAE": 12843,
+                "DUMS": 21001,
                 "FORMATIONS COURTES": {
                     "CLES DE GESTION DE PROJET": 18553
                 },
                 "L3 LICENCE GESTION": {
-                    "L3 Gestion prc gestion sanitaire et sociale": {
-                        "L3 Gestion prc gestion sanitaire et sociale": 10810
-                    },
+                    "L3 Gestion prc gestion sanitaire et sociale": 10810,
                     "L3 Gestion prc sciences de gestion": {
                         "GROUPE 1": 14523,
                         "GROUPE 2": 14524,
@@ -4551,30 +4435,20 @@
                     }
                 },
                 "Master 2": {
-                    "M2 Contrôle de gestion et audit organisationnel": {
-                        "M2 Contrôle de gestion et audit organisationnel": 17108
-                    },
-                    "M2 Finance prc back office, risques et conformité": {
-                        "M2 Finance prc back office, risques et conformité": 17111
-                    },
-                    "M2 Finance prc chargé clientèles bancaires/chargé d'affaires": {
-                        "M2 Finance prc chargé clientèles bancaires/chargé d'affaires": 17120
-                    },
+                    "M2 Contrôle de gestion et audit organisationnel": 17108,
+                    "M2 Finance prc back office, risques et conformité": 17111,
+                    "M2 Finance prc chargé clientèles bancaires/chargé d'affaires": 17120,
                     "M2 GRH prc management en stratégie d'entreprise": {
                         "M2 GRH QVT": 28164,
                         "M2 GRH prc Management en Stratégie d'Entreprise Groupe FA": 17853,
                         "M2 GRH prc Management en Stratégie d'Entreprise Groupe FI": 15186
                     },
-                    "M2 GRH prc management en stratégie d'entreprise FC": {
-                        "M2 GRH prc management en stratégie d'entreprise FC": 7357
-                    },
+                    "M2 GRH prc management en stratégie d'entreprise FC": 7357,
                     "M2 Gestion ressources humaines prc qualité de vie au travail": {
                         "M2 GRH prc Qualité de Vie au Travail Groupe FA": 17855,
                         "M2 GRH prc Qualité de Vie au Travail Groupe FI": 15184
                     },
-                    "M2 Gestion ressources humaines prc qualité de vie au travail FC": {
-                        "M2 Gestion ressources humaines prc qualité de vie au travail FC": 7364
-                    },
+                    "M2 Gestion ressources humaines prc qualité de vie au travail FC": 7364,
                     "M2 MAE prc management de la qualité et des projets": {
                         "M2MQP FI/FA": 10783
                     },
@@ -4585,12 +4459,8 @@
                         "Groupe FA": 15154,
                         "Groupe FI": 15152
                     },
-                    "M2 Management des PME-PMI prc mngt des PME & entrepreneuriat": {
-                        "M2 Management des PME-PMI prc mngt des PME & entrepreneuriat": 1275
-                    },
-                    "M2 Management des PME-PMI prc mngt des PME & entrepreneuriat FC": {
-                        "M2 Management des PME-PMI prc mngt des PME & entrepreneuriat FC": 9012
-                    },
+                    "M2 Management des PME-PMI prc mngt des PME & entrepreneuriat": 1275,
+                    "M2 Management des PME-PMI prc mngt des PME & entrepreneuriat FC": 9012,
                     "M2 Marketing Vente prc Marketing des Services et Digital": {
                         "M2MSD": 10779
                     },
@@ -4600,9 +4470,7 @@
                     "M2 Mngt administration entrep prc rech & conseil en mngt": {
                         "M2 RCM": 19574
                     },
-                    "M2 PME FC": {
-                        "M2 PME FC": 9003
-                    }
+                    "M2 PME FC": 9003
                 }
             },
             "IEJ": {
@@ -4737,9 +4605,7 @@
                             }
                         },
                         "L3-Droit (S1)": {
-                            "L3 Droit Français-Droit Allemand": {
-                                "L3 Droit Français-Droit Allemand": 10827
-                            },
+                            "L3 Droit Français-Droit Allemand": 10827,
                             "L3 Droit Privé A -DPRA": {
                                 "L3 Droit Privé A - DPRA-1 option Travail/lib fonda (Ang)": {
                                     "L3 Droit Privé A - DPRA-1 option travail/lib fonda(Ang)": 2002
@@ -5041,12 +4907,8 @@
                                     }
                                 },
                                 "L2 Science GESTION (classique)": {
-                                    "L2 GESTION - DG1-3 option Gestion": {
-                                        "L2 GESTION - DG1-3 option Gestion": 2844
-                                    },
-                                    "L2 GESTION - DG1-4 option Gestion": {
-                                        "L2 GESTION - DG1-4 option Gestion": 2853
-                                    },
+                                    "L2 GESTION - DG1-3 option Gestion": 2844,
+                                    "L2 GESTION - DG1-4 option Gestion": 2853,
                                     "L2 GESTION - DG1-5 option Gestion/Eco": {
                                         "L2 GESTION - DG1-5 option Eco": 2857,
                                         "L2 GESTION - DG1-5 option Gestion": 2856
@@ -5148,9 +5010,7 @@
                                 "Option mémoire de recherche M1 Droit de la santé - droit privé": 17432
                             }
                         },
-                        "TD Dt Cde publique M1 santé- Dt public S7": {
-                            "TD Dt Cde publique M1 santé- Dt public S7": 9087
-                        }
+                        "TD Dt Cde publique M1 santé- Dt public S7": 9087
                     },
                     "M1 Droit du patrimoine prc ingénierie patrimoniale": {
                         "M1 Drt du patrimoine prc ingénierie patrimoniale S7": {
@@ -5194,12 +5054,8 @@
                         }
                     },
                     "M1 Droit franco-allemand": {
-                        "M1 Droit franco-allemand S7": {
-                            "M1 Droit franco-allemand S7": 469
-                        },
-                        "M1 Droit franco-allemand S8": {
-                            "M1 Droit franco-allemand S8": 423
-                        }
+                        "M1 Droit franco-allemand S7": 469,
+                        "M1 Droit franco-allemand S8": 423
                     },
                     "M1 Droit public prc Droit et Gestion Publique Locale": {
                         "M1 Droit public prc DGPL S7": {
@@ -5226,9 +5082,7 @@
                     },
                     "M1 Droit public prc Juriste de Droit Public": {
                         "M1 Droit public prc JDP S7": {
-                            "Gr 1 M1 TD Droit Cde publique JDP S7": {
-                                "Gr 1 M1 TD Droit Cde publique JDP S7": 18845
-                            },
+                            "Gr 1 M1 TD Droit Cde publique JDP S7": 18845,
                             "Gr 1 M1 Droit public JDP S7": {
                                 "Gr M1 Droit public JDP S7 Anglais": 18541,
                                 "Gr 1 M1 Droit public JDP S7 Espagnol": 6498,
@@ -5373,30 +5227,20 @@
                             }
                         }
                     },
-                    "M2 DAF - Droit de l'entreprise prc droit des affaires": {
-                        "M2 DAF - Droit de l'entreprise prc droit des affaires": 15398
-                    },
-                    "M2 DGPL - Droit public prc droit et gestion publique locale": {
-                        "M2 DGPL - Droit public prc droit et gestion publique locale": 2759
-                    },
+                    "M2 DAF - Droit de l'entreprise prc droit des affaires": 15398,
+                    "M2 DGPL - Droit public prc droit et gestion publique locale": 2759,
                     "M2 DROIT INTERNATIONAL / DAI": {
                         "ALLEMAND": 17280,
                         "ESPAGNOL": 17556
                     },
-                    "M2 DSO - Droit de l'entreprise prc droit social": {
-                        "M2 DSO - Droit de l'entreprise prc droit social": 15399
-                    },
-                    "M2 Droit de la santé": {
-                        "M2 Droit de la Santé": 15364
-                    },
+                    "M2 DSO - Droit de l'entreprise prc droit social": 15399,
+                    "M2 Droit de la santé": 15364,
                     "M2 Droit du patrimoine prc ingénierie patrimoniale": {
                         "Allemand": 17534,
                         "Anglais": 17531,
                         "Espagnol": 17532
                     },
-                    "M2 Droit européen prc Droit langues": {
-                        "M2 Droit européen prc Droit langues": 20938
-                    },
+                    "M2 Droit européen prc Droit langues": 20938,
                     "M2 Droit européen prc juriste européen": {
                         "M2 Droit européen prc juriste européen": {
                             "S7 M2 JE LV2 Allemand TD": 5439,
@@ -5416,9 +5260,7 @@
                     "M2 ETP - Dt de l'envt & de l'urbanisme prc envt, territ, paysages": {
                         "M2 ETP Dt de l'envt & de l'urbanisme prc envt, territ, paysages": 12505
                     },
-                    "M2 JPP - Etudes Judiciaires Approfondies": {
-                        "M2 JPP - Etudes Judiciaires Approfondies": 6000
-                    },
+                    "M2 JPP - Etudes Judiciaires Approfondies": 6000,
                     "M2 Justice procès et procédures": {
                         "Allemand": 15439,
                         "Anglais": 14788,
@@ -5427,14 +5269,10 @@
                     "M2 MTU - Droit de l'environnement et de l'urbanisme prc MTU": {
                         "M2 MTU Droit de l'environnement et de l'urbanisme prc MTU": 17122
                     },
-                    "M2 RECHERCHE Droit améngt envrt dévpt prc recherche en envt & urbanisme": {
-                        "M2 RECHERCHE Droit améngt envrt dévpt prc recherche en envt & urbanisme": 25546
-                    }
+                    "M2 RECHERCHE Droit améngt envrt dévpt prc recherche en envt & urbanisme": 25546
                 },
                 "Economie": {
-                    "M1 Economiste d'entreprise": {
-                        "M1 Economiste d'entreprise": 15603
-                    },
+                    "M1 Economiste d'entreprise": 15603,
                     "M2 Economiste d'entreprise": {
                         "M2 ECONOMIE INTERNATIONALE": 6094,
                         "M2 Economiste d'entreprise": 15613
@@ -5648,9 +5486,7 @@
                             }
                         }
                     },
-                    "M2 RECHERCHE Géo améngt envrt dévpt prc recherche en envt & urbanisme": {
-                        "M2 RECHERCHE Géo améngt envrt dévpt prc recherche en envt & urbanisme": 1848
-                    },
+                    "M2 RECHERCHE Géo améngt envrt dévpt prc recherche en envt & urbanisme": 1848,
                     "Masters Enseignement": {
                         "Enseignement M1 Géo": 4586,
                         "Enseignement M1 Géo Colle Gr1": 21634,
@@ -5669,9 +5505,7 @@
                         "Option B": 6987,
                         "Option C": 10098
                     },
-                    "AGREG Interne anglais": {
-                        "AGREG Interne anglais": 7388
-                    }
+                    "AGREG Interne anglais": 7388
                 },
                 "Lettres Classiques": {
                     "AGREG externe LC": 4028,
@@ -5922,20 +5756,12 @@
                         "L3Ang-MRI C Théâtre non ouvert": 5099
                     }
                 },
-                "M1 MEEF parcours anglais": {
-                    "M1 MEEF parcours anglais": 1650
-                },
-                "M2 MEEF prc anglais": {
-                    "M2 MEEF prc anglais": 15381
-                }
+                "M1 MEEF parcours anglais": 1650,
+                "M2 MEEF prc anglais": 15381
             },
             "Arts du Spectacle": {
-                "M1 Art lett civ prc Culture et médiati des arts du spectacle": {
-                    "M1 Art lett civ prc Culture et médiati des arts du spectacle": 17668
-                },
-                "M2 Art lett civ prc Culture et médiati des arts du spectacle": {
-                    "M2 Art lett civ prc Culture et médiati des arts du spectacle": 17666
-                }
+                "M1 Art lett civ prc Culture et médiati des arts du spectacle": 17668,
+                "M2 Art lett civ prc Culture et médiati des arts du spectacle": 17666
             },
             "Double Licence Anglais-Espagnol": {
                 "L1- Double Licence Anglais-Espagnol": {
@@ -7564,15 +7390,9 @@
             },
             "Master études culturelles": {
                 "M1 Langues et Sociétés prc Etudes culturelles": {
-                    "M1R Allemand": {
-                        "M1R Allemand": 8952
-                    },
-                    "M1R Anglais": {
-                        "M1R Anglais": 8966
-                    },
-                    "M1R Espagnol": {
-                        "M1R Espagnol": 8949
-                    }
+                    "M1R Allemand": 8952,
+                    "M1R Anglais": 8966,
+                    "M1R Espagnol": 8949
                 },
                 "M2 Langues et Sociétés prc Etudes culturelles": {
                     "M2R Anglais": 8970,
@@ -7580,15 +7400,11 @@
                 }
             },
             "P R I (Parcours Relations Internationales)": {
-                "L1 PRI": {
-                    "L1 PRI": 17098
-                },
+                "L1 PRI": 17098,
                 "L2PRI": {
                     "L2 PRI": 17273
                 },
-                "L3 MRI": {
-                    "L3 MRI": 17624
-                }
+                "L3 MRI": 17624
             },
             "Sciences du langage": {
                 "L1 Sciences du Langage": {
@@ -7857,9 +7673,7 @@
                     "D.U. FLE/S": 6806,
                     "Tiers temps / D.U. FLE/S": 10364
                 },
-                "M1 FLE DUALE": {
-                    "M1 FLE DUALE": 9553
-                },
+                "M1 FLE DUALE": 9553,
                 "M1 FLE prc Appropriation diversité insertion": {
                     "Groupes Elaborer son TER": 2137,
                     "Groupes Elaborer son projet prof/recherche": {
@@ -7883,9 +7697,7 @@
                 "M1 FLE prc Sociolinguistique et didactique qualitatif": {
                     "M1 FLE SODIQ": 9584
                 },
-                "M2 FLE DUALE": {
-                    "M2 FLE DUALE": 10712
-                },
+                "M2 FLE DUALE": 10712,
                 "M2 FLE prc Appropriation diversité insertion": {
                     "Groupes Contextes et Pratiques d'intervention": {
                         "Groupe Isabelle Pierozak": 4129,
@@ -7904,9 +7716,7 @@
             }
         },
         "U.F.R. Pharmacie": {
-            "C2i niveau 2 métiers de la Santé": {
-                "C2i niveau 2 métiers de la Santé": 10927
-            },
+            "C2i niveau 2 métiers de la Santé": 10927,
             "D.P.R.B / U.E.R.B.": {
                 "Bases biochimiques de la personnalisation des traitements en onco-hématologie": 650,
                 "Biochimie metabolique et régul.": 1577,
@@ -7934,23 +7744,15 @@
                 "D.U. Maintien à domicile": {
                     "D.U. MAD": 6732
                 },
-                "D.U. Phyto/Aromathérapie": {
-                    "D.U. Phyto/Aromathérapie": 19485
-                },
-                "DU Petit appareillage orthopédique à l'officine": {
-                    "DU Petit appareillage orthopédique à l'officine": 12792
-                }
+                "D.U. Phyto/Aromathérapie": 19485,
+                "DU Petit appareillage orthopédique à l'officine": 12792
             },
             "Etudiants Fantômes": {
                 "*****": 5387
             },
             "Internat Pharmacie": {
-                "DES Pharmacie Clinique": {
-                    "DES Pharmacie Clinique": 3844
-                },
-                "DES Pharmacie Hospitalière": {
-                    "DES Pharmacie Hospitalière": 4555
-                }
+                "DES Pharmacie Clinique": 3844,
+                "DES Pharmacie Hospitalière": 4555
             },
             "Licence Pharmacie": {
                 "LP Bio industries et bio technologies prc CQBio": {
@@ -8112,9 +7914,7 @@
                         "5 IND - TD Groupe 1": 21455,
                         "5 IND - TD Groupe 2": 21456
                     },
-                    "5ème année - Filière Internat": {
-                        "5ème année - Filière INTERNAT": 15975
-                    },
+                    "5ème année - Filière Internat": 15975,
                     "5ème année - Filière Officine": {
                         "Groupes SESA": {
                             "5 OFF - SESA CAPR": 6380,
@@ -8538,9 +8338,7 @@
                             "L2 ST Gr1C Choix Physique 7 P4.2 (pas cette année 2018-2019)": 25797
                         }
                     },
-                    "L3 Sciences de la Terre": {
-                        "L3 Sciences de la Terre": 10820
-                    }
+                    "L3 Sciences de la Terre": 10820
                 },
                 "Sciences de la Vie": {
                     "L1 Sciences de la Vie": {
@@ -9248,15 +9046,11 @@
                     }
                 },
                 "M2 Biologie Santé": {
-                    "M2 Biologie de la Reproduction": {
-                        "M2 Biologie de la Reproduction": 7346
-                    },
+                    "M2 Biologie de la Reproduction": 7346,
                     "M2 Biologie santé prc physiopathologies": {
                         "M2 Physiopathologies": 2790
                     },
-                    "M2 Cognition, Neurosciences et Psychologie": {
-                        "M2 Cognition, Neurosciences et Psychologie": 2734
-                    }
+                    "M2 Cognition, Neurosciences et Psychologie": 2734
                 },
                 "M2 Compétence Complémentaire en Informatique (CCI)": {
                     "M2 CCI": {
@@ -9265,27 +9059,17 @@
                     }
                 },
                 "MEEF": {
-                    "M1 MEEF Maths": {
-                        "M1 MEEF Maths": 11019
-                    },
+                    "M1 MEEF Maths": 11019,
                     "M1 MEEF PC": {
                         "M1 MEFF PC Gr1": 14840,
                         "M1 MEFF PC Gr2": 15443
                     },
-                    "M2 MEEF Maths": {
-                        "M2 MEEF Maths": 11126
-                    },
-                    "M2 MEEF PC": {
-                        "M2 MEEF PC": 14865
-                    }
+                    "M2 MEEF Maths": 11126,
+                    "M2 MEEF PC": 14865
                 },
                 "Mathématiques": {
-                    "M1 Mathématiques": {
-                        "M1 Mathématiques": 11007
-                    },
-                    "M2 Mathématiques": {
-                        "M2 Mathématiques": 1661
-                    }
+                    "M1 Mathématiques": 11007,
+                    "M2 Mathématiques": 1661
                 },
                 "Matériaux": {
                     "M1 Chimie et sciences des Matériaux - 1er semestre": {
@@ -9375,21 +9159,15 @@
                     }
                 },
                 "Sciences du Vivant": {
-                    "M1 Biotechnologies et Droit": {
-                        "M1 Biotechnologies et Droit": 10750
-                    },
+                    "M1 Biotechnologies et Droit": 10750,
                     "M1 Infectiologie, Immunité, Vaccinologie et Biomédicament (I²VB)": {
                         "M1 I²VB": {
                             "I²VB TP Gr1": 6372,
                             "I²VB TP Gr2": 6374
                         }
                     },
-                    "M1 Management des Bioproductions (MaBio)": {
-                        "M1 Management des Bioproductions (MaBio)": 10767
-                    },
-                    "M2 Biotechnologies et Droit": {
-                        "M2 Biotechnologies et Droit": 10778
-                    }
+                    "M1 Management des Bioproductions (MaBio)": 10767,
+                    "M2 Biotechnologies et Droit": 10778
                 }
             }
         }
