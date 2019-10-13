@@ -2,7 +2,7 @@ import { Request, Response } from "express"
 import { getLangMsg } from "../../utils/messages"
 import icalFromUrl from "./ical"
 
-const parseCustomIcal = (req: Request, res: Response) => {
+const parseCustomIcal = async (req: Request, res: Response) => {
     const { url } = req.query
 
     if (!url) {
@@ -10,13 +10,12 @@ const parseCustomIcal = (req: Request, res: Response) => {
         return
     }
 
-    icalFromUrl(url, (error: any, vevents: []) => {
-        if (error) {
-            res.status(400).send({ error })
-            return
-        }
+    try {
+        const vevents = await icalFromUrl(url)
         res.send({ data: { vevents } })
-    })
+    } catch (error) {
+        res.status(400).send({ error })
+    }
 }
 
 export default parseCustomIcal

@@ -31,13 +31,8 @@ const parseIcal = async (req: Request, res: Response) => {
             .replace("%firstDate%", firstDate)
             .replace("%lastDate%", lastDate)
 
-        icalFromUrl(univUrl, (error: any, vevents: []) => {
-            if (error) {
-                res.status(400).send({ error })
-                return
-            }
-            res.send({ data: { vevents } })
-        })
+        const vevents = await icalFromUrl(univUrl)
+        res.send({ data: { vevents } })
     } catch (error) {
         res.status(400).send({ error })
     }
