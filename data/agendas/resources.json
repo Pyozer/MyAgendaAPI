@@ -41,7 +41,7 @@
   },
   {
     "id": "univ_rennes",
-    "university": "Université de Rennes 1",
+    "university": "Université de Rennes",
     "agendaUrl": "https://planning.univ-rennes1.fr/jsp/custom/modules/plannings/cal.jsp?projectId=1&calType=ical&resources=%res%&firstDate=%startDate%&lastDate=%lastDate%",
     "loginUrl": "https://sso-cas.univ-rennes1.fr/login",
     "loginFields": [
