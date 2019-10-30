@@ -19,12 +19,16 @@ app.use((req: Request, res: Response, next: NextFunction) => {
     const { url: key } = req
     client.get(key, (err, result) => {
         if (err == null && result != null) {
-            res.contentType("application/json").send(result)
+            res.type("json").send(result)
         } else {
             const oldSend = res.send
             res.send = function(body?: any): Response { // tslint:disable-line only-arrow-functions
                 client.set(key, `${body}`)
-                client.expire(key, 60)
+                if (key.startsWith("/api/resources") || key.startsWith("/api/helps"))
+                    client.expire(key, 86400) // 24 hours cache
+                else
+                    client.expire(key, 300) // 5 minutes cache
+                
                 return oldSend.apply(res, arguments)
             }
             next()
