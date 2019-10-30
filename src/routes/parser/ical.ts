@@ -1,13 +1,13 @@
-import request from 'request-promise-native';
+import request from "request-promise-native"
 
-const ical = require('node-ical');
+const ical = require("node-ical")
 
 const icalFromUrl = async (url: string) => {
     const icalRaw: string = await request.get(url, {
         followAllRedirects: true
-    })    
-    const icalData = await ical.parseICS(icalRaw);
-    
+    })
+    const icalData = await ical.parseICS(icalRaw)
+
     const vevents = []
     for (const key in icalData) {
         if (icalData.hasOwnProperty(key)) {
@@ -17,8 +17,8 @@ const icalFromUrl = async (url: string) => {
                     uid: key,
                     dtstart: ev.start,
                     dtend: ev.end,
-                    description: ev.description || '',
-                    location: ev.location || '',
+                    description: ev.description || "",
+                    location: ev.location || "",
                     summary: ev.summary,
                     dtstamp: ev.dtstamp,
                     created: ev.created,

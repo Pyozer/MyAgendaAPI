@@ -1,6 +1,6 @@
 import { config as dotEnvConfig } from "dotenv"
-import express, { Application, Response, NextFunction, Request } from "express"
-import redis from 'redis';
+import express, { Application, NextFunction, Request, Response } from "express"
+import redis from "redis"
 import middlewares from "./middlewares"
 import baseRoute from "./routes/base"
 import { welcome } from "./routes/welcome"
@@ -11,7 +11,7 @@ dotEnvConfig()
 const app: Application = express()
 
 const { PORT = 3000, REDIS_URL } = process.env
-let client = redis.createClient(REDIS_URL)
+const client = redis.createClient(REDIS_URL)
 
 applyMiddlewares(middlewares, app)
 
@@ -19,13 +19,13 @@ app.use((req: Request, res: Response, next: NextFunction) => {
     const { url: key } = req
     client.get(key, (err, result) => {
         if (err == null && result != null) {
-            res.contentType('application/json').send(result)
+            res.contentType("application/json").send(result)
         } else {
-            let oldSend = res.send;
-            res.send = function (body?: any): Response {
+            const oldSend = res.send
+            res.send = function(body?: any): Response { // tslint:disable-line only-arrow-functions
                 client.set(key, `${body}`)
                 client.expire(key, 60)
-                return oldSend.apply(res, arguments);
+                return oldSend.apply(res, arguments)
             }
             next()
         }
