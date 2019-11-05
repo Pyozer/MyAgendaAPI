@@ -58,6 +58,16 @@ const messages = [
         "You must provide the filename to get help data",
         "Nom du fichier d'aide manquant, impossible de fournir les données",
     ),
+    new Message(
+        "error_request_ics",
+        "An error occurred while retrieving courses. The problem should be corrected soon by your ENT.",
+        "Une erreur est survenue lors de la récupération des cours. Le problème devrait être corrigé bientôt par votre ENT.",
+    ),
+    new Message(
+        "error_parse_ics",
+        "Cannot analyze the file containing your courses... Please report to us the issue.",
+        "Impossible d'analyser le fichier contenant vos cours... N'hésitez pas à me signaler le problème.",
+    ),
 ]
 
 export const getLangMsg = (req: Request, key: string, params?: Record<string, string>) => {

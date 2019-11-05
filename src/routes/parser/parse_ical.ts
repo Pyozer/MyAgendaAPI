@@ -17,24 +17,30 @@ const parseIcal = async (req: Request, res: Response) => {
         return
     }
 
+    let data: any[]
     try {
-        const data: any[] = await readAndParseFile(req, "./data/agendas/resources.json")
-        const univData = data.find((univ: any) => univ.id === univId)
-
-        if (!univData) {
-            res.status(400).send({ error: getLangMsg(req, "unknown_university_id") })
-            return
-        }
-
-        const univUrl = univData.agendaUrl
-            .replace("%res%", resId)
-            .replace("%firstDate%", firstDate)
-            .replace("%lastDate%", lastDate)
-
-        const vevents = await icalFromUrl(univUrl)
-        res.send({ data: { vevents } })
+        data = await readAndParseFile(req, "./data/agendas/resources.json")
     } catch (error) {
         res.status(400).send({ error })
+    }
+
+    const univData = data.find((univ: any) => univ.id === univId)
+
+    if (!univData) {
+        res.status(400).send({ error: getLangMsg(req, "unknown_university_id") })
+        return
+    }
+
+    const univUrl = univData.agendaUrl
+        .replace("%res%", resId)
+        .replace("%firstDate%", firstDate)
+        .replace("%lastDate%", lastDate)
+
+    try {
+        const vevents = await icalFromUrl(univUrl)
+        res.send({ data: { vevents } })
+    } catch (errorKey) {
+        res.status(500).send({ error: getLangMsg(req, errorKey) })
     }
 }
 
