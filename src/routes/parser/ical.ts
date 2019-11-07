@@ -9,14 +9,16 @@ const icalFromUrl = async (url: string) => {
             followAllRedirects: true,
             timeout: 10*60,
         })
-    } catch (_) {
+    } catch (e) {
+        console.error(e);
         throw "error_request_ics"
     }
 
     let icalData;
     try {
         icalData = await ical.parseICS(icalRaw)
-    } catch (_) {
+    } catch (e) {
+        console.error(e);
         throw "error_parse_ics"
     }
 

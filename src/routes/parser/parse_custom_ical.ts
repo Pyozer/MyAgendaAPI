@@ -13,8 +13,8 @@ const parseCustomIcal = async (req: Request, res: Response) => {
     try {
         const vevents = await icalFromUrl(url)
         res.send({ data: { vevents } })
-    } catch (error) {
-        res.status(400).send({ error })
+    } catch (errorKey) {
+        res.status(500).send({ error: getLangMsg(req, errorKey) })
     }
 }
 

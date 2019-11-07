@@ -10,8 +10,8 @@
     "lint": "tslint -c tslint.json -p tsconfig.json --fix",
     "tsc": "tsc",
     "build": "npm-run-all clean lint tsc",
-    "dev": "tsc-watch --onSuccess \"node .\"",
-    "start": "node ."
+    "dev": "tsc-watch --onSuccess \"node --tls-min-v1.0 .\"",
+    "start": "node --tls-min-v1.0 ."
   },
   "dependencies": {
     "body-parser": "^1.19.0",
