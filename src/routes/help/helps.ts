@@ -14,7 +14,7 @@ const helps = async (req: Request, res: Response) => {
                 help.title = help.title.en
             }
         })
-        res.send({ data: helpPages })
+        res.status(200).send({ data: helpPages })
     } catch (error) {
         res.status(400).send({ error })
     }
@@ -29,7 +29,7 @@ const helpFile = async (req: Request, res: Response) => {
     const lang = req.headers["accept-language"]
     try {
         const data = await readFile(req, `./data/help/${req.params.filename}_${lang}.md`)
-        res.send({ data })
+        res.status(200).send({ data })
     } catch (error) {
         res.status(400).send({ error })
     }

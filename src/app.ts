@@ -22,14 +22,16 @@ app.use((req: Request, res: Response, next: NextFunction) => {
             res.type("json").send(result)
         } else {
             const oldSend = res.send
-            res.send = function(body?: any): Response { // tslint:disable-line only-arrow-functions
-                client.set(key, `${body}`)
-                if (key.startsWith("/api/resources") || key.startsWith("/api/helps")) {
-                    // 24 hours cache
-                    client.expire(key, 86400)
-                } else {
-                    // 5 minutes cache
-                    client.expire(key, 300)
+            res.send = function (body?: any): Response { // tslint:disable-line only-arrow-functions
+                if (res.statusCode === 200) {
+                    client.set(key, `${body}`)
+                    if (key.startsWith("/api/resources") || key.startsWith("/api/helps")) {
+                        // 24 hours cache
+                        client.expire(key, 86400)
+                    } else {
+                        // 5 minutes cache
+                        client.expire(key, 300)
+                    }
                 }
 
                 return oldSend.apply(res, arguments)
