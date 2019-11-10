@@ -11,7 +11,7 @@ const icalFromUrl = async (url: string) => {
         })
     } catch (e) {
         console.error(e)
-        throw new Error("error_request_ics")
+        throw "error_request_ics"
     }
 
     let icalData
@@ -19,7 +19,7 @@ const icalFromUrl = async (url: string) => {
         icalData = await ical.parseICS(icalRaw)
     } catch (e) {
         console.error(e)
-        throw new Error("error_parse_ics")
+        throw "error_parse_ics"
     }
 
     const getValue = (obj: any, value: string) => {
