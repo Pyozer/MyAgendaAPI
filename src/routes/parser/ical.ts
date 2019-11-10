@@ -3,23 +3,23 @@ import request from "request-promise-native"
 const ical = require("node-ical")
 
 const icalFromUrl = async (url: string) => {
-    let icalRaw;
+    let icalRaw
     try {
         icalRaw = await request.get(url, {
             followAllRedirects: true,
-            timeout: 10*60,
+            timeout: 10 * 60,
         })
     } catch (e) {
-        console.error(e);
-        throw "error_request_ics"
+        console.error(e)
+        throw new Error("error_request_ics")
     }
 
-    let icalData;
+    let icalData
     try {
         icalData = await ical.parseICS(icalRaw)
     } catch (e) {
-        console.error(e);
-        throw "error_parse_ics"
+        console.error(e)
+        throw new Error("error_parse_ics")
     }
 
     const getValue = (obj: any, value: string) => {
