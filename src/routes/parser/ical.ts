@@ -7,7 +7,7 @@ const icalFromUrl = async (url: string) => {
     try {
         icalRaw = await request.get(url, {
             followAllRedirects: true,
-            timeout: 10 * 1000,
+            timeout: 10 * 60,
         })
     } catch (e) {
         console.error(e)

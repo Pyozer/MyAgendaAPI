@@ -10,38 +10,50 @@ dotEnvConfig()
 
 const app: Application = express()
 
-const { PORT = 3000, REDIS_URL } = process.env
+const { PORT = 3000, REDIS_URL, ENVIRONMENT = "dev" } = process.env
 const client = redis.createClient(REDIS_URL)
 
 applyMiddlewares(middlewares, app)
 
 app.use((req: Request, res: Response, next: NextFunction) => {
     const { url: key } = req
-    client.get(key, (err, result) => {
-        if (err == null && result != null) {
-            res.type("json").send(result)
-        } else {
-            const oldSend = res.send
-            res.send = function(body?: any): Response { // tslint:disable-line only-arrow-functions
-                if (res.statusCode === 200) {
-                    client.set(key, `${body}`)
-                    if (key.startsWith("/api/resources") || key.startsWith("/api/helps")) {
-                        // 24 hours cache
-                        client.expire(key, 86400)
-                    } else {
-                        // 5 minutes cache
-                        client.expire(key, 300)
-                    }
-                }
 
-                return oldSend.apply(res, arguments)
+    const maxExpire = ENVIRONMENT === "dev" ? 0 : 86400 // Maximum cache duration (24 hours)
+
+    let validExpire = 300 // 5 minutes of cache
+    if (key.startsWith("/api/resources") || key.startsWith("/api/helps")) {
+        validExpire = 86400 // 24 hours cache
+    }
+
+    client.ttl(key, (_, remaining) => {
+        const timeElapsed = Math.abs(maxExpire - (remaining || 0))
+
+        client.get(key, (err, cache) => {
+            if (err == null && cache != null && timeElapsed <= validExpire) {
+                res.type("json").send(cache)
+            } else {
+                const oldSend = res.send
+                res.send = function(body?: any): Response { // tslint:disable-line only-arrow-functions
+                    let fixedBody = body
+                    if (res.statusCode === 200) {
+                        client.set(key, `${body}`)
+                        // 24 hours cache in case of failure (fallback)
+                        client.expire(key, maxExpire)
+                    } else if (cache != null) {
+                        // Use latest cached successful response
+                        res.statusCode = 200
+                        fixedBody = cache
+                    }
+
+                    return oldSend.apply(res, [fixedBody])
+                }
+                next()
             }
-            next()
-        }
+        })
     })
 })
 
 app.use("/api", baseRoute)
-app.use("/", welcome)
+app.get("/", welcome)
 
 app.listen(PORT, () => console.log(`API listening on port ${PORT}`))
