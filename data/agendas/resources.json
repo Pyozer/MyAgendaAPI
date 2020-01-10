@@ -98,24 +98,5 @@
       "error": "form .errors",
       "success": "#content .success"
     }
-  },
-  {
-    "id": "parisnanterre",
-    "university": "Université de Paris Nanterre",
-    "agendaUrl": "https://ade.parisnanterre.fr/jsp/custom/modules/plannings/anonymous_cal.jsp?projectId=13&calType=ical&resources=%res%&firstDate=%startDate%&lastDate=%lastDate%",
-    "loginUrl": "https://ticket.parisnanterre.fr/login",
-    "loginFields": [
-      "lt",
-      "_eventId",
-      "submit"
-    ],
-    "credentialFields": {
-      "username": "username",
-      "password": "password"
-    },
-    "statusTags": {
-      "error": "#content .errors",
-      "success": "#content .success"
-    }
   }
 ]
