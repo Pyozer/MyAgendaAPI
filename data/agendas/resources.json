@@ -58,5 +58,64 @@
       "error": "form .alert-danger span",
       "success": "main .alert-success"
     }
+  },
+  {
+    "id": "univ_lyon1",
+    "university": "Université de Lyon 1",
+    "agendaUrl": "http://adelb.univ-lyon1.fr/jsp/custom/modules/plannings/anonymous_cal.jsp?projectId=4&calType=ical&resources=%res%&firstDate=%startDate%&lastDate=%lastDate%",
+    "loginUrl": "https://cas.univ-lyon1.fr/cas/login",
+    "loginFields": [
+      "lt",
+      "execution",
+      "_eventId",
+      "submit"
+    ],
+    "credentialFields": {
+      "username": "username",
+      "password": "password"
+    },
+    "statusTags": {
+      "error": "form .errors",
+      "success": "#content .success"
+    }
+  },
+  {
+    "id": "univ_savoie",
+    "university": "Université de Savoie Mont Blanc",
+    "agendaUrl": "http://ade6-usmb-ro.grenet.fr/jsp/custom/modules/plannings/direct_cal.jsp?projectId=1&calType=ical&resources=%res%&firstDate=%startDate%&lastDate=%lastDate%",
+    "loginUrl": "https://cas-uds.grenet.fr/login",
+    "loginFields": [
+      "execution",
+      "lt",
+      "_eventId",
+      "submit"
+    ],
+    "credentialFields": {
+      "username": "username",
+      "password": "password"
+    },
+    "statusTags": {
+      "error": "form .errors",
+      "success": "#content .success"
+    }
+  },
+  {
+    "id": "parisnanterre",
+    "university": "Université de Paris Nanterre",
+    "agendaUrl": "https://ade.parisnanterre.fr/jsp/custom/modules/plannings/anonymous_cal.jsp?projectId=13&calType=ical&resources=%res%&firstDate=%startDate%&lastDate=%lastDate%",
+    "loginUrl": "https://ticket.parisnanterre.fr/login",
+    "loginFields": [
+      "lt",
+      "_eventId",
+      "submit"
+    ],
+    "credentialFields": {
+      "username": "username",
+      "password": "password"
+    },
+    "statusTags": {
+      "error": "#content .errors",
+      "success": "#content .success"
+    }
   }
 ]
