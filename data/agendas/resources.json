@@ -76,7 +76,7 @@
     },
     "statusTags": {
       "error": "form .errors",
-      "success": "form .success"
+      "success": "#content .success"
     }
   },
   {
@@ -96,7 +96,7 @@
     },
     "statusTags": {
       "error": "form .errors",
-      "success": "form .success"
+      "success": "#content .success"
     }
   },
   {
