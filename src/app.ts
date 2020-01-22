@@ -18,37 +18,36 @@ applyMiddlewares(middlewares, app)
 app.use((req: Request, res: Response, next: NextFunction) => {
     const { url: key } = req
 
-    const maxExpire = ENVIRONMENT === "dev" ? 0 : 86400 // Maximum cache duration (24 hours)
+    const maxExpire = ENVIRONMENT === "dev" ? 5 : (60 * 60 * 12) // Maximum cache duration (12 hours)
 
-    let validExpire = 300 // 5 minutes of cache
+    let validExpire = 60 * 5 // 5 minutes of cache
     if (key.startsWith("/api/resources") || key.startsWith("/api/helps")) {
-        validExpire = 86400 // 24 hours cache
+        validExpire = maxExpire // 12 hours cache
     }
 
     client.ttl(key, (_, remaining) => {
         const timeElapsed = Math.abs(maxExpire - (remaining || 0))
 
         client.get(key, (err, cache) => {
-            if (err == null && cache != null && timeElapsed <= validExpire) {
-                res.type("json").send(cache)
-            } else {
-                const oldSend = res.send
-                res.send = function(body?: any): Response { // tslint:disable-line only-arrow-functions
-                    let fixedBody = body
-                    if (res.statusCode === 200) {
-                        client.set(key, `${body}`)
-                        // 24 hours cache in case of failure (fallback)
-                        client.expire(key, maxExpire)
-                    } else if (cache != null) {
-                        // Use latest cached successful response
-                        res.statusCode = 200
-                        fixedBody = cache
-                    }
-
-                    return oldSend.apply(res, [fixedBody])
-                }
-                next()
+            if (err && !cache && timeElapsed <= validExpire) {
+                return res.type("json").send(cache)
             }
+
+            const oldSend = res.send
+            res.send = function (body?: any): Response { // tslint:disable-line only-arrow-functions
+                if (res.statusCode === 200) {
+                    // 12 hours cache in case of failure (fallback)
+                    client.setex(key, maxExpire, `${body}`)
+                    return oldSend.apply(res, [body])
+                }
+
+                // Use latest cached successful response or classic body
+                if (cache) {
+                    res.statusCode = 200
+                }
+                return oldSend.apply(res, [cache || body])
+            }
+            next()
         })
     })
 })
