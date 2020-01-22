@@ -29,7 +29,7 @@ app.use((req: Request, res: Response, next: NextFunction) => {
         const timeElapsed = Math.abs(maxExpire - (remaining || 0))
 
         client.get(key, (err, cache) => {
-            if (err && !cache && timeElapsed <= validExpire) {
+            if (!err && cache && timeElapsed <= validExpire) {
                 return res.type("json").send(cache)
             }
 
