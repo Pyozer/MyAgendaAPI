@@ -14,6 +14,7 @@
     "start": "node --tls-min-v1.0 ."
   },
   "dependencies": {
+    "@sentry/node": "^5.11.1",
     "body-parser": "^1.19.0",
     "compression": "^1.7.4",
     "dotenv": "^8.1.0",
@@ -26,6 +27,7 @@
     "request-promise-native": "^1.0.7"
   },
   "devDependencies": {
+    "@sentry/types": "^5.11.0",
     "@types/body-parser": "^1.17.1",
     "@types/compression": "^1.0.1",
     "@types/dotenv": "^6.1.1",

@@ -1,18 +1,21 @@
 import { config as dotEnvConfig } from "dotenv"
 import express, { Application, NextFunction, Request, Response } from "express"
 import redis from "redis"
+import * as Sentry from '@sentry/node';
 import middlewares from "./middlewares"
 import baseRoute from "./routes/base"
 import { welcome } from "./routes/welcome"
 import { applyMiddlewares } from "./utils"
 
 dotEnvConfig()
+const { PORT = 3000, REDIS_URL, ENVIRONMENT = "dev", SENTRY_DSN } = process.env
 
 const app: Application = express()
 
-const { PORT = 3000, REDIS_URL, ENVIRONMENT = "dev" } = process.env
-const client = redis.createClient(REDIS_URL)
+Sentry.init({ dsn: SENTRY_DSN });
+app.use(Sentry.Handlers.requestHandler())
 
+const client = redis.createClient(REDIS_URL)
 applyMiddlewares(middlewares, app)
 
 app.use((req: Request, res: Response, next: NextFunction) => {

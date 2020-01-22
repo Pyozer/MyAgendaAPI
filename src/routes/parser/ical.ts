@@ -9,7 +9,6 @@ const icalFromUrl = async (url: string) => {
             timeout: 6000, // 6sec
         })
     } catch (e) {
-        console.error(e)
         throw "error_request_ics"
     }
 
@@ -17,7 +16,6 @@ const icalFromUrl = async (url: string) => {
     try {
         icalData = ical.parseICS(icalRaw)
     } catch (e) {
-        console.error(e)
         throw "error_parse_ics"
     }
 
