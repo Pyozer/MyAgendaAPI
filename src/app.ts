@@ -21,7 +21,7 @@ applyMiddlewares(middlewares, app)
 app.use((req: Request, res: Response, next: NextFunction) => {
     const { url: key } = req
 
-    const maxExpire = ENVIRONMENT === "dev" ? 5 : (60 * 60 * 12) // Maximum cache duration (12 hours)
+    const maxExpire = ENVIRONMENT === "dev" ? 5 : (60 * 60 * 6) // Maximum cache duration (6 hours)
 
     let validExpire = 60 * 5 // 5 minutes of cache
     if (key.startsWith("/api/resources") || key.startsWith("/api/helps")) {
@@ -39,7 +39,7 @@ app.use((req: Request, res: Response, next: NextFunction) => {
             const oldSend = res.send
             res.send = function (body?: any): Response { // tslint:disable-line only-arrow-functions
                 if (res.statusCode === 200) {
-                    // 12 hours cache in case of failure (fallback)
+                    // 6 hours cache in case of failure (fallback)
                     client.setex(key, maxExpire, `${body}`)
                     return oldSend.apply(res, [body])
                 }
