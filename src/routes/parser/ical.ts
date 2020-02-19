@@ -4,7 +4,7 @@ import request from "request-promise-native"
 const icalFromUrl = async (url: string) => {
     let icalRaw: string
     try {
-        icalRaw = await request.get(url, {
+        icalRaw = await request.get(url.replace('webcal://', 'https://'), {
             followAllRedirects: true,
             timeout: 6000, // 6sec
         })
