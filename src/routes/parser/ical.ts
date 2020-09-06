@@ -4,25 +4,25 @@ import request from "request-promise-native"
 const icalFromUrl = async (url: string) => {
     let icalRaw: string
     try {
-        icalRaw = await request.get(url.replace('webcal://', 'https://'), {
+        icalRaw = await request.get(url.replace("webcal://", "https://"), {
             followAllRedirects: true,
             strictSSL: false,
             timeout: 6000, // 6sec
         })
     } catch (e) {
-        console.log("Request error: ", e);
+        console.log("Request error: ", e)
         throw "error_request_ics"
     }
-    
+
     let icalData: ical.FullCalendar
     try {
         icalData = ical.parseICS(icalRaw)
     } catch (e) {
-        console.log("Parsing error: ", e);
+        console.log("Parsing error: ", e)
         throw "error_parse_ics"
     }
 
-    const getValue = (value: any) => !value ? '' : value.val || value
+    const getValue = (value: any) => !value ? "" : value.val || value
 
     const vevents = []
     for (const key in icalData) {

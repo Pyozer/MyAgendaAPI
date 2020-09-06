@@ -3,7 +3,7 @@ import { getLangMsg } from "../../utils/messages"
 import icalFromUrl from "./ical"
 
 const parseCustomIcal = async (req: Request, res: Response) => {
-    const { url } = req.query
+    const url: string = req.query.url
 
     if (!url) {
         res.status(400).send({ error: getLangMsg(req, "missing_ical_url") })

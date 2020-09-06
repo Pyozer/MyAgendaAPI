@@ -1,7 +1,7 @@
+import * as Sentry from "@sentry/node"
 import { config as dotEnvConfig } from "dotenv"
 import express, { Application, NextFunction, Request, Response } from "express"
 import redis from "redis"
-import * as Sentry from '@sentry/node';
 import middlewares from "./middlewares"
 import baseRoute from "./routes/base"
 import { welcome } from "./routes/welcome"
@@ -12,7 +12,7 @@ const { PORT = 3000, REDIS_URL, ENVIRONMENT = "dev", SENTRY_DSN } = process.env
 
 const app: Application = express()
 
-Sentry.init({ dsn: SENTRY_DSN });
+Sentry.init({ dsn: SENTRY_DSN })
 app.use(Sentry.Handlers.requestHandler())
 
 const client = redis.createClient(REDIS_URL)
@@ -37,7 +37,7 @@ app.use((req: Request, res: Response, next: NextFunction) => {
             }
 
             const oldSend = res.send
-            res.send = function (body?: any): Response { // tslint:disable-line only-arrow-functions
+            res.send = function(body?: any): Response { // tslint:disable-line only-arrow-functions
                 if (res.statusCode === 200) {
                     // 6 hours cache in case of failure (fallback)
                     client.setex(key, maxExpire, `${body}`)
