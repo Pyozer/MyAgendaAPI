@@ -6,16 +6,19 @@ const icalFromUrl = async (url: string) => {
     try {
         icalRaw = await request.get(url.replace('webcal://', 'https://'), {
             followAllRedirects: true,
+            strictSSL: false,
             timeout: 6000, // 6sec
         })
     } catch (e) {
+        console.log("Request error: ", e);
         throw "error_request_ics"
     }
-
+    
     let icalData: ical.FullCalendar
     try {
         icalData = ical.parseICS(icalRaw)
     } catch (e) {
+        console.log("Parsing error: ", e);
         throw "error_parse_ics"
     }
 
