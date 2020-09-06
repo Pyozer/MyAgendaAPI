@@ -1,10 +1,14 @@
 {
   "name": "myagenda_api",
   "description": "NodeJS Api for MyAgenda app",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "dist/app.js",
   "author": "Jean-Charles Moussé",
   "license": "MIT",
+  "engines": {
+    "node": "12.x",
+    "yarn": "1.x"
+  },
   "scripts": {
     "clean": "rm -rf dist/*",
     "lint": "tslint -c tslint.json -p tsconfig.json --fix",
