@@ -1,9 +1,9 @@
 import { Request, Response } from "express"
 import { readAndParseFile } from "../../utils"
 import { getLangMsg } from "../../utils/messages"
-import icalFromUrl from "./ical"
+import { icalFromUrl } from "./ical"
 
-const parseIcal = async (req: Request, res: Response) => {
+export const parseIcal = async (req: Request, res: Response) => {
     const { univId, resId } = req.params
     const { firstDate, lastDate } = req.query
 
@@ -43,5 +43,3 @@ const parseIcal = async (req: Request, res: Response) => {
         res.status(500).send({ error: getLangMsg(req, errorKey) })
     }
 }
-
-export default parseIcal

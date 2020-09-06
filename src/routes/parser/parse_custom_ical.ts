@@ -1,6 +1,6 @@
 import { Request, Response } from "express"
 import { getLangMsg } from "../../utils/messages"
-import icalFromUrl from "./ical"
+import { icalFromUrl } from "./ical"
 
 const parseCustomIcal = async (req: Request, res: Response) => {
     const url: string = req.query.url

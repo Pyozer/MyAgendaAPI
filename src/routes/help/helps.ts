@@ -2,7 +2,7 @@ import { Request, Response } from "express"
 import { readAndParseFile, readFile } from "../../utils"
 import { getLangMsg } from "../../utils/messages"
 
-const helps = async (req: Request, res: Response) => {
+export const helps = async (req: Request, res: Response) => {
     const lang = req.headers["accept-language"]
 
     try {
@@ -20,7 +20,7 @@ const helps = async (req: Request, res: Response) => {
     }
 }
 
-const helpFile = async (req: Request, res: Response) => {
+export const helpFile = async (req: Request, res: Response) => {
     if (!req.params.filename) {
         res.status(400).send({ error: getLangMsg(req, "unknown_help_file") })
         return
@@ -34,5 +34,3 @@ const helpFile = async (req: Request, res: Response) => {
         res.status(400).send({ error })
     }
 }
-
-export { helps, helpFile }

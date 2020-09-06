@@ -1,7 +1,7 @@
 import { Router } from "express"
 import { helpFile, helps } from "./help/helps"
 import parseCustomIcal from "./parser/parse_custom_ical"
-import parseIcal from "./parser/parse_ical"
+import { parseIcal } from "./parser/parse_ical"
 import { resources, universityResources } from "./resources/resources"
 import { welcome } from "./welcome"
 

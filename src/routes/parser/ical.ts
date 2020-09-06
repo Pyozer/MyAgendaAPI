@@ -1,7 +1,19 @@
 import ical from "ical"
 import request from "request-promise-native"
 
-const icalFromUrl = async (url: string) => {
+interface IEvent {
+    uid: string,
+    dtstart: Date,
+    dtend: Date,
+    description: string,
+    location: string,
+    summary: string,
+    dtstamp: Date,
+    created: Date,
+    lastmodified: Date,
+}
+
+export const icalFromUrl = async (url: string): Promise<IEvent[]> => {
     let icalRaw: string
     try {
         icalRaw = await request.get(url.replace("webcal://", "https://"), {
@@ -24,7 +36,7 @@ const icalFromUrl = async (url: string) => {
 
     const getValue = (value: any) => !value ? "" : value.val || value
 
-    const vevents = []
+    const vevents: IEvent[] = []
     for (const key in icalData) {
         if (icalData.hasOwnProperty(key)) {
             const ev = icalData[key]
@@ -45,5 +57,3 @@ const icalFromUrl = async (url: string) => {
     }
     return vevents
 }
-
-export default icalFromUrl
