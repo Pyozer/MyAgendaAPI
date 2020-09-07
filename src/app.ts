@@ -21,11 +21,11 @@ applyMiddlewares(middlewares, app)
 app.use((req: Request, res: Response, next: NextFunction) => {
     const { url: key } = req
 
-    const maxExpire = ENVIRONMENT === "dev" ? 5 : (60 * 60 * 6) // Maximum cache duration (6 hours)
+    const maxExpire = ENVIRONMENT === "dev" ? 5 : (60 * 60 * 2) // Maximum cache duration (2 hours)
 
-    let validExpire = 60 * 5 // 5 minutes of cache
+    let validExpire = 60 * 10 // 10 minutes of cache
     if (key.startsWith("/api/resources") || key.startsWith("/api/helps")) {
-        validExpire = maxExpire // 12 hours cache
+        validExpire = maxExpire // 2 hours cache
     }
 
     client.ttl(key, (_, remaining) => {
@@ -39,8 +39,12 @@ app.use((req: Request, res: Response, next: NextFunction) => {
             const oldSend = res.send
             res.send = function(body?: any): Response { // tslint:disable-line only-arrow-functions
                 if (res.statusCode === 200) {
-                    // 6 hours cache in case of failure (fallback)
-                    client.setex(key, maxExpire, `${body}`)
+                    // 2 hours cache in case of failure (fallback)
+                    try {
+                        client.setex(key, maxExpire, `${body}`)
+                    } catch (e) {
+                        console.log(e)
+                    }
                     return oldSend.apply(res, [body])
                 }
 

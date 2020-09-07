@@ -18,6 +18,7 @@ export const icalFromUrl = async (url: string): Promise<IEvent[]> => {
     try {
         icalRaw = await request.get(url.replace("webcal://", "https://"), {
             followAllRedirects: true,
+            maxRedirects: 5,
             strictSSL: false,
             timeout: 6000, // 6sec
         })
