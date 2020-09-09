@@ -1,16 +1,9 @@
 [
     {
         "title": {
-            "en": "Find my agenda",
-            "fr": "Trouver mon agenda"
+            "en": "Where can I find the export link for my calendar?",
+            "fr": "Où trouver le lien d'exportation de mon agenda ?"
         },
-        "filename": "find_my_agenda"
-    },
-    {
-        "title": {
-            "en": "Why my University is not added ?",
-            "fr": "Pourquoi mon université n'est ajouté ?"
-        },
-        "filename": "where_is_my_university"
+        "filename": "find_export_link"
     }
 ]
