@@ -24,7 +24,10 @@ app.use((req: Request, res: Response, next: NextFunction) => {
     const maxExpire = ENVIRONMENT === "dev" ? 5 : (60 * 60 * 2) // Maximum cache duration (2 hours)
 
     let validExpire = 60 * 10 // 10 minutes of cache
-    if (key.startsWith("/api/resources") || key.startsWith("/api/helps")) {
+
+    // TODO: Re-add help cache
+    //if (key.startsWith("/api/resources") || key.startsWith("/api/helps")) {
+    if (key.startsWith("/api/resources")) {
         validExpire = maxExpire // 2 hours cache
     }
 
