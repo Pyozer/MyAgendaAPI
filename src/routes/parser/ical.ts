@@ -16,14 +16,14 @@ interface IEvent {
 export const icalFromUrl = async (url: string): Promise<IEvent[]> => {
     let icalRaw: string
     try {
-        icalRaw = await request.get(url.replace("webcal://", "https://"), {
+        icalRaw = await request.get(url, {
             followAllRedirects: true,
             maxRedirects: 5,
             strictSSL: false,
             timeout: 6000, // 6sec
         })
     } catch (e) {
-        console.log("Request error: ", e)
+        console.log("Request error: ", e.statusCode, e.error)
         throw "error_request_ics"
     }
 

@@ -3,7 +3,7 @@ import { config as dotEnvConfig } from "dotenv"
 import express, { Application, NextFunction, Request, Response } from "express"
 import redis from "redis"
 import middlewares from "./middlewares"
-import baseRoute from "./routes/base"
+import { apiRouter } from "./routes/base"
 import { welcome } from "./routes/welcome"
 import { applyMiddlewares } from "./utils"
 
@@ -26,7 +26,7 @@ app.use((req: Request, res: Response, next: NextFunction) => {
     let validExpire = 60 * 10 // 10 minutes of cache
 
     // TODO: Re-add help cache
-    //if (key.startsWith("/api/resources") || key.startsWith("/api/helps")) {
+    // if (key.startsWith("/api/resources") || key.startsWith("/api/helps")) {
     if (key.startsWith("/api/resources")) {
         validExpire = maxExpire // 2 hours cache
     }
@@ -62,7 +62,7 @@ app.use((req: Request, res: Response, next: NextFunction) => {
     })
 })
 
-app.use("/api", baseRoute)
+app.use("/api", apiRouter)
 app.get("/", welcome)
 
 app.listen(PORT, () => console.log(`API listening on port ${PORT}`))

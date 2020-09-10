@@ -60,13 +60,13 @@ const messages = [
     ),
     new Message(
         "error_request_ics",
-        "An error occurred while retrieving courses. The problem should be corrected soon by your ENT.",
-        "Une erreur est survenue lors de la récupération des cours. Le problème devrait être corrigé bientôt par votre ENT.",
+        "An error occurred while retrieving courses. Please check the url used or contact us.",
+        "Erreur lors de la récupération des cours. Veuillez vérifier l'url utilisée ou contactez nous.",
     ),
     new Message(
         "error_parse_ics",
         "Cannot analyze the file containing your courses... Please report to us the issue.",
-        "Impossible d'analyser le fichier contenant vos cours... N'hésitez pas à me signaler le problème.",
+        "Impossible d'analyser le fichier contenant vos cours... N'hésitez pas à nous signaler le problème.",
     ),
 ]
 

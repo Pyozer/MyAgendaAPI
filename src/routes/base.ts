@@ -1,18 +1,18 @@
 import { Router } from "express"
 import { helpFile, helps } from "./help/helps"
-import parseCustomIcal from "./parser/parse_custom_ical"
+import { parseCustomIcal } from "./parser/parse_custom_ical"
 import { parseIcal } from "./parser/parse_ical"
 import { resources, universityResources } from "./resources/resources"
 import { welcome } from "./welcome"
 
-const router: Router = Router()
+const apiRouter: Router = Router()
 
-router.get("/parseIcal/:univId/:resId", parseIcal)
-router.get("/parseCustomical", parseCustomIcal)
-router.get("/resources", resources)
-router.get("/resources/:univId", universityResources)
-router.get("/helps/:filename", helpFile)
-router.get("/helps", helps)
-router.get("/", welcome)
+apiRouter.get("/parseIcal/:univId/:resId", parseIcal)
+apiRouter.get("/parseCustomical", parseCustomIcal)
+apiRouter.get("/resources", resources)
+apiRouter.get("/resources/:univId", universityResources)
+apiRouter.get("/helps/:filename", helpFile)
+apiRouter.get("/helps", helps)
+apiRouter.get("/", welcome)
 
-export default router
+export { apiRouter }

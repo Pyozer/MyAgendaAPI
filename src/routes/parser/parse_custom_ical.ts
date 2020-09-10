@@ -2,12 +2,17 @@ import { Request, Response } from "express"
 import { getLangMsg } from "../../utils/messages"
 import { icalFromUrl } from "./ical"
 
-const parseCustomIcal = async (req: Request, res: Response) => {
-    const url: string = `${req.query.url}`
+export const parseCustomIcal = async (req: Request, res: Response) => {
+    let url: string = `${req.query.url}`
 
     if (!url || url.trim().length === 0) {
         res.status(400).send({ error: getLangMsg(req, "missing_ical_url") })
         return
+    }
+
+    url = url.replace("webcal://", "https://")
+    if (!url.startsWith("https://") || !url.startsWith("http://")) {
+        url = `https://${url}`
     }
 
     try {
@@ -17,5 +22,3 @@ const parseCustomIcal = async (req: Request, res: Response) => {
         res.status(500).send({ error: getLangMsg(req, errorKey) })
     }
 }
-
-export default parseCustomIcal
