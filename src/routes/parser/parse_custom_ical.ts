@@ -11,9 +11,6 @@ export const parseCustomIcal = async (req: Request, res: Response) => {
     }
 
     url = url.replace("webcal://", "https://")
-    if (!url.startsWith("https://") || !url.startsWith("http://")) {
-        url = `https://${url}`
-    }
 
     try {
         const vevents = await icalFromUrl(url)
