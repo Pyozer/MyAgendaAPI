@@ -33,7 +33,7 @@ export const handleAcceptLanguage = (router: Router) => {
 
 export const handleMorgan = (router: Router) => {
   router.use(morgan(
-    "[:date] :method :url :status :res[content-length] - :response-time ms",
+    "[:date] :method :status :response-time ms :res[content-length] - :url",
     {
       skip: (_, res) => res.statusCode < 400
     }
