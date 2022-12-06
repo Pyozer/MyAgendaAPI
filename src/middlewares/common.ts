@@ -1,7 +1,6 @@
 import parser from "body-parser"
 import compression from "compression"
 import { NextFunction, Request, Response, Router } from "express"
-import morgan from "morgan"
 
 export const handleBodyRequestParsing = (router: Router) => {
   router.use(parser.urlencoded({ extended: true }))
@@ -29,13 +28,4 @@ export const handleAcceptLanguage = (router: Router) => {
     }
     next()
   })
-}
-
-export const handleMorgan = (router: Router) => {
-  router.use(morgan(
-    "[:date] :method :status :response-time ms :res[content-length] - :url",
-    {
-      skip: (_, res) => res.statusCode < 400
-    }
-  ))
 }
