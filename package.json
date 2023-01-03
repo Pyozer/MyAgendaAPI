@@ -1,12 +1,12 @@
 {
   "name": "myagenda_api",
   "description": "NodeJS Api for MyAgenda app",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "dist/app.js",
   "author": "Jean-Charles Moussé",
   "license": "MIT",
   "engines": {
-    "node": "12.x",
+    "node": "16.x",
     "yarn": "1.x"
   },
   "scripts": {
@@ -18,28 +18,23 @@
     "start": "node --tls-min-v1.0 ."
   },
   "dependencies": {
-    "@sentry/node": "^5.11.1",
-    "body-parser": "^1.19.0",
-    "compression": "^1.7.4",
-    "dotenv": "^8.1.0",
-    "express": "^4.17.1",
-    "fs-extra": "^8.1.0",
-    "ical": "^0.6.0",
-    "request": "^2.88.0",
-    "request-promise-native": "^1.0.7"
+    "@sentry/node": "7.28.1",
+    "axios": "1.2.2",
+    "body-parser": "1.20.1",
+    "compression": "1.7.4",
+    "dotenv": "16.0.3",
+    "express": "4.18.2",
+    "fs-extra": "^11.1.0",
+    "ical": "0.8.0"
   },
   "devDependencies": {
-    "@sentry/types": "^5.11.0",
-    "@types/body-parser": "^1.17.1",
-    "@types/compression": "^1.0.1",
-    "@types/dotenv": "^6.1.1",
-    "@types/express": "^4.11.1",
-    "@types/fs-extra": "^8.0.0",
-    "@types/ical": "^0.6.1",
-    "@types/request-promise-native": "^1.0.17",
-    "npm-run-all": "^4.1.5",
-    "tsc-watch": "^4.0.0",
-    "tslint": "^5.20.0",
-    "typescript": "^3.6.3"
+    "@sentry/types": "7.28.1",
+    "@types/compression": "1.7.2",
+    "@types/fs-extra": "^9.0.13",
+    "@types/ical": "0.8.0",
+    "npm-run-all": "4.1.5",
+    "tsc-watch": "6.0.0",
+    "tslint": "5.20.1",
+    "typescript": "4.9.4"
   }
 }

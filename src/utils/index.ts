@@ -18,7 +18,7 @@ export const readFile = async (req: Request, filePath: string): Promise<string> 
     }
 }
 
-export const readAndParseFile = async (req: Request, filePath: string) => {
+export const readAndParseFile = async (req: Request, filePath: string): Promise<any> => {
     const data = await readFile(req, filePath)
     try {
         return JSON.parse(data)
