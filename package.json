@@ -1,7 +1,7 @@
 {
   "name": "myagenda_api",
   "description": "NodeJS Api for MyAgenda app",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "main": "dist/app.js",
   "author": "Jean-Charles Moussé",
   "license": "MIT",
