@@ -14,7 +14,7 @@ Adding from your iPhone:
 - Choose "Add a calendar with subscription"
 - Paste the link of your calendar and click on "Subscribe"
 
-You can also add from your Macbook (not useful, if already added from your iPhone).
+You can also add from your MacBook (not useful, if already added from your iPhone).
 To do this, open the calendar, then file -> Calendar subscription.
 
 You will now have access to your university calendar on your Apple calendar.
