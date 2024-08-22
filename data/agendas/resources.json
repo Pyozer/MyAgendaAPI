@@ -1,5 +1,26 @@
 [
   {
+
+    "id": "end_app",
+    "university": "FIN DE L'APP, VOIR SECTION AIDE",
+    "agendaUrl": "http://planning.univ-lemans.fr/jsp/custom/modules/plannings/anonymous_cal.jsp?projectId=2&calType=ical&resources=%res%&firstDate=%startDate%&lastDate=%lastDate%",
+    "loginUrl": "https://cas.univ-lemans.fr/cas/login",
+    "loginFields": [
+      "lt",
+      "execution",
+      "_eventId",
+      "submit"
+    ],
+    "credentialFields": {
+      "username": "username",
+      "password": "password"
+    },
+    "statusTags": {
+      "error": ".errors",
+      "success": ".success"
+    }
+  },
+  {
     "id": "univ_lemans",
     "university": "Le Mans Université",
     "agendaUrl": "http://planning.univ-lemans.fr/jsp/custom/modules/plannings/anonymous_cal.jsp?projectId=2&calType=ical&resources=%res%&firstDate=%startDate%&lastDate=%lastDate%",
