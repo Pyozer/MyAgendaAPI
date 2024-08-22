@@ -26,9 +26,9 @@ export const parseCustomIcal = async (req: Request, res: Response) => {
                 dtend: dtend.toDate(),
                 created: new Date("2024-08-22T00:00:00Z"),
                 dtstamp: new Date("2024-08-22T00:00:00Z"),
-                description: "FIN DE L'APP LE 01/09. VOIR SECTION AIDE POUR + D'INFOS",
+                summary: "FIN DE L'APP LE 01/09. VOIR SECTION AIDE POUR + D'INFOS",
                 lastmodified: new Date(),
-                summary: "Voir la section aide pour plus d'infos et solutions alternatives",
+                description: "Voir la section aide pour plus d'infos et solutions alternatives",
                 location: "",
                 uid: uuidv4()
             })
