@@ -5,6 +5,7 @@ import { getLangMsg } from "../../utils/messages"
 import { icalFromUrl } from "./ical"
 
 export const parseCustomIcal = async (req: Request, res: Response) => {
+    console.log('User Agent', req.headers["user-agent"]);
     let url: string = `${req.query.url}`
 
     if (!url || url.trim().length === 0) {
