@@ -1,4 +1,4 @@
-# Pourquoi la fin de l'application ?
+# Pourquoi la fin probable de l'application ?
 
 L'application a été créée en 2016 et a beaucoup évolué depuis.
 Ensuite la motivation était moins présente, car je n'utilisais plus moi-même l'application.
@@ -13,13 +13,11 @@ L'application ne me rapporte absolument rien, car gratuite, sans pub et aucun do
 
 J'ai préparé depuis quelque temps déjà une mise à jour pour ne plus utiliser l'API (entre autres), mais côté iOS elle est publiée sur le compte d'un ami.
 Ce qui n'est pas pratique et compliqué pour la mettre à jour.
+Sur Android, cette nouvelle mise à jour a été publié.
 
 
 Avoir un compte Apple développeur coûte 99$ par an, soit ~8$ par mois.
-Ce dont je n'ai pas envie non plus.
+C'est une solution que j'envisage, car cela me permettrait de pouvoir publier d'autres applications.
 
 
-C'est pourquoi j'ai décidé d'arrêter l'application.
-
-
-Si toute fois un développeur souhaite la reprendre pour la maintenir, n'hésitez pas à me contacter.
+Mais côté iOS, l'arrêt de l'application le 1er Sept est probable.

@@ -1,4 +1,4 @@
-# Why the end of the application?
+# Why the probable end of the application?
 
 The application was created in 2016 and has evolved a lot since then.
 Then the motivation was less present, because I no longer used the application myself.
@@ -9,11 +9,11 @@ Indeed, the application uses an API also developed by myself, which is used to r
 The application brings me absolutely nothing, because it is free, without ads and no donations, but costs me each month.
 
 I have been preparing an update for some time now to no longer use the API (among others), but on the iOS side it is published on a friend's account.
-Which is not practical and complicated to update.
+Which is not practical and complicated to update it.
+
+On Android, this new update has been published.
 
 Having an Apple developer account costs $99 per year, or ~$8 per month.
-Which I don't want either.
+This is a solution I am considering, because it would allow me to be able to publish other applications.
 
-That's why I decided to stop the application.
-
-If any developer wants to take it over to maintain it, don't hesitate to contact me.
+But on the iOS side, the application will probably be discontinued on September 1st.
