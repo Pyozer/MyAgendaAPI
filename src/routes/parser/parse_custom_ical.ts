@@ -5,7 +5,8 @@ import { getLangMsg } from "../../utils/messages"
 import { icalFromUrl } from "./ical"
 
 export const parseCustomIcal = async (req: Request, res: Response) => {
-    console.log('User Agent', req.headers["user-agent"]);
+    const isIOS = req.headers["user-agent"].includes("Dart/2.6");
+
     let url: string = `${req.query.url}`
 
     if (!url || url.trim().length === 0) {
@@ -27,9 +28,9 @@ export const parseCustomIcal = async (req: Request, res: Response) => {
                 dtend: dtend.toDate(),
                 created: new Date("2024-08-22T00:00:00Z"),
                 dtstamp: new Date("2024-08-22T00:00:00Z"),
-                summary: "FIN DE L'APP LE 01/09. VOIR SECTION AIDE POUR + D'INFOS",
+                summary: isIOS ? "FIN PROBABLE DE L'APP LE 01/09. VOIR SECTION AIDE POUR + D'INFOS" : "Nouvelle mise à jour disponible !",
                 lastmodified: new Date(),
-                description: "Voir la section aide pour plus d'infos et solutions alternatives",
+                description: isIOS ? "Voir la section aide pour plus d'infos et solutions alternatives" : "Allez sur le Play Store pour mettre à jour l'application",
                 location: "",
                 uid: uuidv4()
             })
