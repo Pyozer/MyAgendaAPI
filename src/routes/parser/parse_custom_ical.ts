@@ -5,7 +5,7 @@ import { getLangMsg } from "../../utils/messages"
 import { icalFromUrl } from "./ical"
 
 export const parseCustomIcal = async (req: Request, res: Response) => {
-    const isIOS = req.headers["user-agent"].includes("Dart/2.6");
+    const isIOS = req.headers["user-agent"].includes("Dart/2.6")
 
     let url: string = `${req.query.url}`
 

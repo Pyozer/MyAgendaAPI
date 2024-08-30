@@ -1,5 +1,6 @@
 import axios from "axios"
 import ical from "ical"
+import { Agent } from "https"
 
 interface IEvent {
     uid: string,
@@ -19,6 +20,9 @@ export const icalFromUrl = async (url: string): Promise<IEvent[]> => {
         icalRaw = await axios.get(url, {
             maxRedirects: 5,
             timeout: 6000, // 6sec
+            httpsAgent: new Agent({
+                rejectUnauthorized: false
+            })
         }).then((res) => res.data)
     } catch (e) {
         console.log("Request error: ", e.statusCode, e.error)
