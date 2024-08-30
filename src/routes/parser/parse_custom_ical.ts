@@ -19,21 +19,23 @@ export const parseCustomIcal = async (req: Request, res: Response) => {
     try {
         const vevents = await icalFromUrl(url)
 
-        for (let i = 0; i < 15; i++) {
-            const dtstart = moment.tz("Europe/Paris").startOf("day").add(i, "days")
-            const dtend = dtstart.clone().add(1, "hour")
+        if (!isIOS) {
+            for (let i = 0; i < 15; i++) {
+                const dtstart = moment.tz("Europe/Paris").startOf("day").add(i, "days")
+                const dtend = dtstart.clone().add(1, "hour")
 
-            vevents.push({
-                dtstart: dtstart.toDate(),
-                dtend: dtend.toDate(),
-                created: new Date("2024-08-22T00:00:00Z"),
-                dtstamp: new Date("2024-08-22T00:00:00Z"),
-                summary: isIOS ? "FIN PROBABLE DE L'APP LE 01/09. VOIR SECTION AIDE POUR + D'INFOS" : "Nouvelle mise à jour disponible !",
-                lastmodified: new Date(),
-                description: isIOS ? "Voir la section aide pour plus d'infos et solutions alternatives" : "Allez sur le Play Store pour mettre à jour l'application",
-                location: "",
-                uid: uuidv4()
-            })
+                vevents.push({
+                    dtstart: dtstart.toDate(),
+                    dtend: dtend.toDate(),
+                    created: new Date("2024-08-22T00:00:00Z"),
+                    dtstamp: new Date("2024-08-22T00:00:00Z"),
+                    summary: isIOS ? "FIN PROBABLE DE L'APP LE 01/09. VOIR SECTION AIDE POUR + D'INFOS" : "Nouvelle mise à jour disponible !",
+                    lastmodified: new Date(),
+                    description: isIOS ? "Voir la section aide pour plus d'infos et solutions alternatives" : "Allez sur le Play Store pour mettre à jour l'application",
+                    location: "",
+                    uid: uuidv4()
+                })
+            }
         }
 
         res.status(200).send({ data: { vevents } })

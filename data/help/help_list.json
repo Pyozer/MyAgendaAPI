@@ -1,20 +1,6 @@
 [
     {
         "title": {
-            "en": "Information about the end of the application",
-            "fr": "Informations sur la fin de l'application"
-        },
-        "filename": "info_end_app"
-    },
-    {
-        "title": {
-            "en": "Alternative solutions to UnivAgenda",
-            "fr": "Solutions alternatives à UnivAgenda"
-        },
-        "filename": "app_alternatives"
-    },
-    {
-        "title": {
             "en": "Where can I find the export link for my calendar?",
             "fr": "Où trouver le lien d'exportation de mon agenda ?"
         },

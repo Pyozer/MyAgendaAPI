@@ -1,7 +1,7 @@
 [
   {
     "id": "univ_lemans",
-    "university": "NE PAS CHOISIR",
+    "university": "CHOISIR L'AUTRE OPTION",
     "agendaUrl": "http://planning.univ-lemans.fr/jsp/custom/modules/plannings/anonymous_cal.jsp?projectId=2&calType=ical&resources=%res%&firstDate=%startDate%&lastDate=%lastDate%",
     "loginUrl": "https://cas.univ-lemans.fr/cas/login",
     "loginFields": [
