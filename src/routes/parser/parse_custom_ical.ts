@@ -29,9 +29,9 @@ export const parseCustomIcal = async (req: Request, res: Response) => {
                     dtend: dtend.toDate(),
                     created: new Date("2024-08-22T00:00:00Z"),
                     dtstamp: new Date("2024-08-22T00:00:00Z"),
-                    summary: isIOS ? "FIN PROBABLE DE L'APP LE 01/09. VOIR SECTION AIDE POUR + D'INFOS" : "Nouvelle mise à jour disponible !",
+                    summary: "Nouvelle mise à jour disponible !",
                     lastmodified: new Date(),
-                    description: isIOS ? "Voir la section aide pour plus d'infos et solutions alternatives" : "Allez sur le Play Store pour mettre à jour l'application",
+                    description: isIOS ? "Allez sur l'AppStore pour mettre à jour l'application" : "Allez sur le Play Store pour mettre à jour l'application",
                     location: "",
                     uid: uuidv4()
                 })
