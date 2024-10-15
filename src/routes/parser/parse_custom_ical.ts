@@ -19,23 +19,21 @@ export const parseCustomIcal = async (req: Request, res: Response) => {
     try {
         const vevents = await icalFromUrl(url)
 
-        if (!isIOS) {
-            for (let i = 0; i < 15; i++) {
-                const dtstart = moment.tz("Europe/Paris").startOf("day").add(i, "days")
-                const dtend = dtstart.clone().add(1, "hour")
+        for (let i = 0; i < 15; i++) {
+            const dtstart = moment.tz("Europe/Paris").startOf("day").add(i, "days").hour(12)
+            const dtend = dtstart.clone().add(1, "hour")
 
-                vevents.push({
-                    dtstart: dtstart.toDate(),
-                    dtend: dtend.toDate(),
-                    created: new Date("2024-08-22T00:00:00Z"),
-                    dtstamp: new Date("2024-08-22T00:00:00Z"),
-                    summary: "Nouvelle mise à jour disponible !",
-                    lastmodified: new Date(),
-                    description: isIOS ? "Allez sur l'AppStore pour mettre à jour l'application" : "Allez sur le Play Store pour mettre à jour l'application",
-                    location: "",
-                    uid: uuidv4()
-                })
-            }
+            vevents.push({
+                dtstart: dtstart.toDate(),
+                dtend: dtend.toDate(),
+                created: new Date("2024-08-22T00:00:00Z"),
+                dtstamp: new Date("2024-08-22T00:00:00Z"),
+                summary: "Mise à jour de l'application disponible !",
+                lastmodified: new Date(),
+                description: "Cette version cessera de fonctionner fin octobre !",
+                location: isIOS ? "App Store" : "Play Store",
+                uid: uuidv4()
+            })
         }
 
         res.status(200).send({ data: { vevents } })
